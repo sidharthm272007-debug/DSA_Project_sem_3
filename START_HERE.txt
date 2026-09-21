@@ -1,0 +1,25 @@
+ResQGraph: how to start it (Windows, macOS, Linux)
+
+1. Open a terminal IN THIS FOLDER. You are in the right place if you can see app.py and requirements.txt
+   (Windows: type  dir   -  macOS/Linux: type  ls).
+   Windows shortcut: open this folder in File Explorer, click the address bar, type  powershell  and press Enter.
+
+2. Run these two commands, one after the other:
+
+       python -m pip install -r requirements.txt
+       python -m streamlit run app.py
+
+   (The first command is needed only once and takes a few minutes. A line saying
+    "Defaulting to user installation" is normal, not an error.)
+
+3. Your browser opens by itself. If it does not, open the Local URL printed in the terminal (usually http://localhost:8501).
+
+Windows, even easier: double-click  run_windows.bat  in this folder.
+
+If the screen goes blank, freezes, or the maps are slow:
+  - Double-click  run_windows_no_maps.bat  (no map pictures; every result is still there), or
+  - In the app's left sidebar, under "Map detail", choose "No maps" (or "Light", the default).
+  - Close other programs and browser tabs, and use an up-to-date Chrome or Edge with hardware acceleration ON.
+  The app needs about 1 GB of free memory. Best route now and Disaster lab need less than the planning pages.
+
+Problems? See README.md, section "Run".

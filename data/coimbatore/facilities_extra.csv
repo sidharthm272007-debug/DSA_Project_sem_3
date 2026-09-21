@@ -1,0 +1,8 @@
+name,kind,tier,lat,lon,locality
+# Add your own facilities here (one per line; no # on data lines). kind = hospital | fire_station | police | ambulance_post
+# Give lat,lon if you know them, or leave them blank and give a locality name that exists in OSM (placed at its centre, flagged approximate).
+# Example: Gandhipuram Fire Station,fire_station,,11.0185,76.9678,
+#
+# Known gaps in the OpenStreetMap data (not filled in because no verified coordinates were available):
+#   - Fire stations 'Coimbatore (South)' and 'Coimbatore (North)', 'Sulur' (per a community list of TN Fire & Rescue stations)
+#   - Ambulance (108) posts, which OSM does not map in Coimbatore

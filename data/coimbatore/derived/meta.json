@@ -1,0 +1,20 @@
+{
+  "nodes": 72584,
+  "arcs": 180155,
+  "giant_scc_share": 0.990424887027444,
+  "population_total": 2200000.0,
+  "population_outside_giant": 18739.972667135626,
+  "facilities": {
+    "hospital_t1": 8,
+    "hospital_t2": 179,
+    "hospital_t3": 118,
+    "fire_station": 2,
+    "police": 20,
+    "manual": 5
+  },
+  "named_ways": 1610,
+  "named_structures": 34,
+  "landmarks": 338,
+  "population_source": "OSM road-density proxy scaled to the Corporation estimate (Budget 2023-24, ~22 lakh); not a census grid",
+  "dropped_typed_landmarks": 20
+}

@@ -1,0 +1,4 @@
+# Extra packages for running the tests and scripts/verify.py (networkx is only used as an independent check, never by the app).
+-r requirements.txt
+networkx>=3.0
+pytest>=8.0

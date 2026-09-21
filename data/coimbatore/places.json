@@ -1,0 +1,3658 @@
+[
+  {
+    "name": "Vellalur",
+    "lat": 10.9799326,
+    "lon": 77.0290732,
+    "kind": "suburb",
+    "node": 65264,
+    "snap_dist_m": 22.619186734581458
+  },
+  {
+    "name": "Thudiyalur Police Station",
+    "lat": 11.0820675,
+    "lon": 76.9412411,
+    "kind": "police",
+    "node": 12670,
+    "snap_dist_m": 44.42477385578517
+  },
+  {
+    "name": "SREC Health Center",
+    "lat": 11.1005451,
+    "lon": 76.9637445,
+    "kind": "hospital",
+    "node": 42,
+    "snap_dist_m": 126.61547845047096
+  },
+  {
+    "name": "Housing Unit",
+    "lat": 11.0401716,
+    "lon": 76.9484153,
+    "kind": "neighbourhood",
+    "node": 51291,
+    "snap_dist_m": 60.11524455789399
+  },
+  {
+    "name": "Kaundampalayam",
+    "lat": 11.0449641,
+    "lon": 76.9465251,
+    "kind": "suburb",
+    "node": 22809,
+    "snap_dist_m": 12.257373708772885
+  },
+  {
+    "name": "Cheran Nagar",
+    "lat": 11.0520529,
+    "lon": 76.9446241,
+    "kind": "neighbourhood",
+    "node": 21852,
+    "snap_dist_m": 32.76543394461257
+  },
+  {
+    "name": "GN Mills",
+    "lat": 11.060303,
+    "lon": 76.9447575,
+    "kind": "suburb",
+    "node": 55539,
+    "snap_dist_m": 44.574566095696525
+  },
+  {
+    "name": "Thudiyalur",
+    "lat": 11.0805532,
+    "lon": 76.9421498,
+    "kind": "suburb",
+    "node": 57,
+    "snap_dist_m": 28.655011420480893
+  },
+  {
+    "name": "Narasimhnaickenpalayam",
+    "lat": 11.1155895,
+    "lon": 76.9386992,
+    "kind": "suburb",
+    "node": 35863,
+    "snap_dist_m": 26.284563441401726
+  },
+  {
+    "name": "Kovaipudur",
+    "lat": 10.9454149,
+    "lon": 76.9392603,
+    "kind": "suburb",
+    "node": 8645,
+    "snap_dist_m": 72.25826036999437
+  },
+  {
+    "name": "Perur",
+    "lat": 10.976406,
+    "lon": 76.9141784,
+    "kind": "town",
+    "node": 33891,
+    "snap_dist_m": 11.161675483572772
+  },
+  {
+    "name": "Kuniamuthur",
+    "lat": 10.9664454,
+    "lon": 76.9565931,
+    "kind": "suburb",
+    "node": 8982,
+    "snap_dist_m": 17.840379258104825
+  },
+  {
+    "name": "Avarampalayam",
+    "lat": 11.029412,
+    "lon": 76.9854653,
+    "kind": "suburb",
+    "node": 160,
+    "snap_dist_m": 38.72425612878958
+  },
+  {
+    "name": "Gandhipuram",
+    "lat": 11.0182714,
+    "lon": 76.9677744,
+    "kind": "suburb",
+    "node": 3012,
+    "snap_dist_m": 79.90801503089142
+  },
+  {
+    "name": "Podanur",
+    "lat": 10.9585609,
+    "lon": 76.988307,
+    "kind": "town",
+    "node": 9439,
+    "snap_dist_m": 56.74176426071474
+  },
+  {
+    "name": "Sivanandhapuram",
+    "lat": 11.0610742,
+    "lon": 76.9991005,
+    "kind": "suburb",
+    "node": 48661,
+    "snap_dist_m": 47.463307792309806
+  },
+  {
+    "name": "Ellen Multispeciality Hospital",
+    "lat": 11.0213634,
+    "lon": 76.9708723,
+    "kind": "hospital",
+    "node": 801,
+    "snap_dist_m": 47.091320521717385
+  },
+  {
+    "name": "GP Hospital",
+    "lat": 11.0201233,
+    "lon": 76.9710726,
+    "kind": "hospital",
+    "node": 28958,
+    "snap_dist_m": 46.249879709010365
+  },
+  {
+    "name": "Arunn Surgery",
+    "lat": 11.0110912,
+    "lon": 76.9671438,
+    "kind": "clinic",
+    "node": 15,
+    "snap_dist_m": 23.073734745480444
+  },
+  {
+    "name": "Saravana Dental Care Hospital",
+    "lat": 11.0028292,
+    "lon": 76.9513725,
+    "kind": "hospital",
+    "node": 1731,
+    "snap_dist_m": 32.0017216065136
+  },
+  {
+    "name": "Senthil Hospital",
+    "lat": 11.0089752,
+    "lon": 76.9578034,
+    "kind": "hospital",
+    "node": 555,
+    "snap_dist_m": 48.597583378070034
+  },
+  {
+    "name": "Dr. S. G. Rajarathinam Hospital",
+    "lat": 11.0095256,
+    "lon": 76.9619316,
+    "kind": "hospital",
+    "node": 29076,
+    "snap_dist_m": 28.555846007043026
+  },
+  {
+    "name": "Ram Nagar",
+    "lat": 11.0136544,
+    "lon": 76.9628953,
+    "kind": "suburb",
+    "node": 28930,
+    "snap_dist_m": 59.72059009219648
+  },
+  {
+    "name": "RS Puram",
+    "lat": 11.0080177,
+    "lon": 76.9501661,
+    "kind": "suburb",
+    "node": 538,
+    "snap_dist_m": 68.46593334150889
+  },
+  {
+    "name": "K. G. Hospital, Coimbatore",
+    "lat": 11.0004227,
+    "lon": 76.9715023,
+    "kind": "hospital",
+    "node": 20629,
+    "snap_dist_m": 50.78487908407811
+  },
+  {
+    "name": "Sengaliappan Nursing Home",
+    "lat": 11.0165542,
+    "lon": 76.955239,
+    "kind": "hospital",
+    "node": 57162,
+    "snap_dist_m": 29.25021967788695
+  },
+  {
+    "name": "Villangkurichi",
+    "lat": 11.0737435,
+    "lon": 77.0169513,
+    "kind": "suburb",
+    "node": 11018,
+    "snap_dist_m": 8.416048030159024
+  },
+  {
+    "name": "Ondipudur",
+    "lat": 11.0039691,
+    "lon": 77.0493049,
+    "kind": "suburb",
+    "node": 10760,
+    "snap_dist_m": 50.45406638619413
+  },
+  {
+    "name": "Papampatti Pirivu",
+    "lat": 11.0096812,
+    "lon": 77.0798403,
+    "kind": "suburb",
+    "node": 4168,
+    "snap_dist_m": 41.8299056162016
+  },
+  {
+    "name": "Peelamedu",
+    "lat": 11.0277825,
+    "lon": 76.9986157,
+    "kind": "suburb",
+    "node": 5225,
+    "snap_dist_m": 71.80999338948548
+  },
+  {
+    "name": "Vadakovai",
+    "lat": 11.0151807,
+    "lon": 76.9536792,
+    "kind": "suburb",
+    "node": 692,
+    "snap_dist_m": 99.70941996331307
+  },
+  {
+    "name": "Racecourse",
+    "lat": 11.0010786,
+    "lon": 76.9775574,
+    "kind": "suburb",
+    "node": 30586,
+    "snap_dist_m": 23.577073212485622
+  },
+  {
+    "name": "Singanallur",
+    "lat": 11.0028585,
+    "lon": 77.0234948,
+    "kind": "suburb",
+    "node": 13685,
+    "snap_dist_m": 29.186771912336614
+  },
+  {
+    "name": "Irugur",
+    "lat": 11.0182228,
+    "lon": 77.0655208,
+    "kind": "suburb",
+    "node": 33086,
+    "snap_dist_m": 26.66234081506828
+  },
+  {
+    "name": "PN Palayam",
+    "lat": 11.0177028,
+    "lon": 76.9844792,
+    "kind": "suburb",
+    "node": 6660,
+    "snap_dist_m": 19.0997033520724
+  },
+  {
+    "name": "Rathinapuri",
+    "lat": 11.0262931,
+    "lon": 76.9622382,
+    "kind": "suburb",
+    "node": 2696,
+    "snap_dist_m": 11.472529556340948
+  },
+  {
+    "name": "Ganapathy",
+    "lat": 11.0383247,
+    "lon": 76.9780717,
+    "kind": "suburb",
+    "node": 26042,
+    "snap_dist_m": 43.543795067492034
+  },
+  {
+    "name": "Tatabad",
+    "lat": 11.0194943,
+    "lon": 76.9572601,
+    "kind": "suburb",
+    "node": 51458,
+    "snap_dist_m": 73.45340646260057
+  },
+  {
+    "name": "Neelikonampalayam",
+    "lat": 11.0111322,
+    "lon": 77.0337855,
+    "kind": "suburb",
+    "node": 13947,
+    "snap_dist_m": 25.83523456039622
+  },
+  {
+    "name": "Puliakulam",
+    "lat": 11.004464,
+    "lon": 76.9919988,
+    "kind": "suburb",
+    "node": 29072,
+    "snap_dist_m": 53.423434233734056
+  },
+  {
+    "name": "Bala Hospital",
+    "lat": 10.9969296,
+    "lon": 76.995705,
+    "kind": "hospital",
+    "node": 51432,
+    "snap_dist_m": 5.790425746847196
+  },
+  {
+    "name": "Sowripalayam",
+    "lat": 11.0097377,
+    "lon": 77.0073151,
+    "kind": "suburb",
+    "node": 1349,
+    "snap_dist_m": 56.276871904105526
+  },
+  {
+    "name": "Ramanathapuram",
+    "lat": 10.9947773,
+    "lon": 76.99213,
+    "kind": "suburb",
+    "node": 3484,
+    "snap_dist_m": 18.907940135477926
+  },
+  {
+    "name": "District Police Office",
+    "lat": 10.9990022,
+    "lon": 76.9677805,
+    "kind": "police",
+    "node": 25161,
+    "snap_dist_m": 38.332956660350824
+  },
+  {
+    "name": "Town Hall",
+    "lat": 10.9967718,
+    "lon": 76.9556171,
+    "kind": "suburb",
+    "node": 1707,
+    "snap_dist_m": 55.46153346120415
+  },
+  {
+    "name": "Ukkadam",
+    "lat": 10.9913011,
+    "lon": 76.9628106,
+    "kind": "suburb",
+    "node": 2166,
+    "snap_dist_m": 40.61682323796498
+  },
+  {
+    "name": "AIT Colony",
+    "lat": 11.0087298,
+    "lon": 76.9724177,
+    "kind": "neighbourhood",
+    "node": 11072,
+    "snap_dist_m": 28.561428694109658
+  },
+  {
+    "name": "Kongunad Hospital, Coimbatore",
+    "lat": 11.018058,
+    "lon": 76.9604883,
+    "kind": "hospital",
+    "node": 2193,
+    "snap_dist_m": 30.185900106984054
+  },
+  {
+    "name": "Sheela Clinic",
+    "lat": 11.01843,
+    "lon": 76.9604642,
+    "kind": "hospital",
+    "node": 805,
+    "snap_dist_m": 38.97098780772239
+  },
+  {
+    "name": "Ganapathy FireStation",
+    "lat": 11.0391993,
+    "lon": 76.9975014,
+    "kind": "fire_station",
+    "node": 893,
+    "snap_dist_m": 14.375503371053194
+  },
+  {
+    "name": "Bharathi Nagar",
+    "lat": 11.0471906,
+    "lon": 76.9890493,
+    "kind": "suburb",
+    "node": 2781,
+    "snap_dist_m": 22.76070877865655
+  },
+  {
+    "name": "Surya Hospital, Coimbatore",
+    "lat": 11.0390101,
+    "lon": 76.979517,
+    "kind": "hospital",
+    "node": 199,
+    "snap_dist_m": 19.720613984139327
+  },
+  {
+    "name": "Ukkadam Police Station(B2)",
+    "lat": 10.9890037,
+    "lon": 76.9615341,
+    "kind": "police",
+    "node": 71564,
+    "snap_dist_m": 21.775307200757098
+  },
+  {
+    "name": "Womens Police Station",
+    "lat": 11.0155688,
+    "lon": 76.9683463,
+    "kind": "police",
+    "node": 14,
+    "snap_dist_m": 41.85694748535952
+  },
+  {
+    "name": "Fair Pharma",
+    "lat": 10.8927566,
+    "lon": 76.9246984,
+    "kind": "hospital",
+    "node": 51621,
+    "snap_dist_m": 104.60241295662419
+  },
+  {
+    "name": "Kattor Police Station",
+    "lat": 11.0153033,
+    "lon": 76.968307,
+    "kind": "police",
+    "node": 24858,
+    "snap_dist_m": 49.560754001991455
+  },
+  {
+    "name": "Madukkarai Police Station",
+    "lat": 10.911453,
+    "lon": 76.9490401,
+    "kind": "police",
+    "node": 36140,
+    "snap_dist_m": 81.77697999676572
+  },
+  {
+    "name": "Vasan eye Care Hospital",
+    "lat": 10.9560967,
+    "lon": 76.9540004,
+    "kind": "hospital",
+    "node": 38758,
+    "snap_dist_m": 17.274263025330807
+  },
+  {
+    "name": "Ettimadai",
+    "lat": 10.8984762,
+    "lon": 76.8959745,
+    "kind": "station",
+    "node": 1196,
+    "snap_dist_m": 26.08587243557178
+  },
+  {
+    "name": "PSG Hospitals",
+    "lat": 11.0188398,
+    "lon": 77.0073136,
+    "kind": "hospital",
+    "node": 40735,
+    "snap_dist_m": 71.42119733656298
+  },
+  {
+    "name": "K T V R Group Hospital",
+    "lat": 11.026167,
+    "lon": 76.9499384,
+    "kind": "hospital",
+    "node": 11498,
+    "snap_dist_m": 38.596740497306705
+  },
+  {
+    "name": "Madukkarai",
+    "lat": 10.9148303,
+    "lon": 76.9534813,
+    "kind": "town",
+    "node": 18641,
+    "snap_dist_m": 54.683656783697344
+  },
+  {
+    "name": "Kurumbapalayam",
+    "lat": 11.1132597,
+    "lon": 77.0284746,
+    "kind": "suburb",
+    "node": 52777,
+    "snap_dist_m": 32.441149615349794
+  },
+  {
+    "name": "Sarvanampatti",
+    "lat": 11.0783323,
+    "lon": 77.003821,
+    "kind": "suburb",
+    "node": 32669,
+    "snap_dist_m": 22.545043797772802
+  },
+  {
+    "name": "Coimbatore Bone and Joint Foundation (P) Ltd.",
+    "lat": 11.0149404,
+    "lon": 76.9543844,
+    "kind": "hospital",
+    "node": 18347,
+    "snap_dist_m": 41.594147839631965
+  },
+  {
+    "name": "Womens Medical Centre, Coimbatore",
+    "lat": 11.0337824,
+    "lon": 76.9517175,
+    "kind": "hospital",
+    "node": 1963,
+    "snap_dist_m": 22.968556901053066
+  },
+  {
+    "name": "Masonic Medical Centre For Children",
+    "lat": 10.9997961,
+    "lon": 76.9799441,
+    "kind": "hospital",
+    "node": 56957,
+    "snap_dist_m": 26.079583012546742
+  },
+  {
+    "name": "Somu medicals",
+    "lat": 11.0264568,
+    "lon": 76.9448591,
+    "kind": "hospital",
+    "node": 1499,
+    "snap_dist_m": 20.769082548265573
+  },
+  {
+    "name": "Akila Medicals",
+    "lat": 11.0265516,
+    "lon": 76.9443924,
+    "kind": "hospital",
+    "node": 1537,
+    "snap_dist_m": 17.746303304240605
+  },
+  {
+    "name": "Dr.U.S.Prakash's Clinic",
+    "lat": 11.0256249,
+    "lon": 76.9372845,
+    "kind": "hospital",
+    "node": 25372,
+    "snap_dist_m": 23.284123341044637
+  },
+  {
+    "name": "KG Eye Hospital",
+    "lat": 11.0825506,
+    "lon": 76.997422,
+    "kind": "hospital",
+    "node": 826,
+    "snap_dist_m": 38.30230755665827
+  },
+  {
+    "name": "Shree Siva Hospital, Ganapathy,",
+    "lat": 11.0441103,
+    "lon": 76.9856071,
+    "kind": "hospital",
+    "node": 32644,
+    "snap_dist_m": 46.61997461798569
+  },
+  {
+    "name": "C2- Race Course Police Station, Coimbatore",
+    "lat": 11.001692,
+    "lon": 76.9713177,
+    "kind": "police",
+    "node": 51645,
+    "snap_dist_m": 30.074208429775826
+  },
+  {
+    "name": "C-3 Saibaba Colony Police Station",
+    "lat": 11.0266348,
+    "lon": 76.9515967,
+    "kind": "police",
+    "node": 72478,
+    "snap_dist_m": 44.22617906136624
+  },
+  {
+    "name": "Sai Shraddha Hospitality",
+    "lat": 11.0254581,
+    "lon": 76.9726262,
+    "kind": "hospital",
+    "node": 3665,
+    "snap_dist_m": 28.749206383374688
+  },
+  {
+    "name": "Vega ENT Hospitals",
+    "lat": 11.0144183,
+    "lon": 76.9437894,
+    "kind": "hospital",
+    "node": 488,
+    "snap_dist_m": 13.54633617243257
+  },
+  {
+    "name": "Sitalakshmi Hospital",
+    "lat": 11.0142906,
+    "lon": 76.9449521,
+    "kind": "hospital",
+    "node": 28648,
+    "snap_dist_m": 42.08573795466153
+  },
+  {
+    "name": "Manonmani Hospital",
+    "lat": 11.0147975,
+    "lon": 76.9475002,
+    "kind": "hospital",
+    "node": 687,
+    "snap_dist_m": 37.943623315861366
+  },
+  {
+    "name": "Balaji Nursing Home",
+    "lat": 11.0148238,
+    "lon": 76.9487649,
+    "kind": "clinic",
+    "node": 57205,
+    "snap_dist_m": 66.81627420658552
+  },
+  {
+    "name": "Preetam's Cardio Care",
+    "lat": 11.0152003,
+    "lon": 76.9498136,
+    "kind": "hospital",
+    "node": 682,
+    "snap_dist_m": 18.0075684331057
+  },
+  {
+    "name": "Kumaran Clinic",
+    "lat": 11.0152582,
+    "lon": 76.9519379,
+    "kind": "clinic",
+    "node": 691,
+    "snap_dist_m": 20.72157358269632
+  },
+  {
+    "name": "Rasi Hospital",
+    "lat": 11.0097731,
+    "lon": 76.9503293,
+    "kind": "hospital",
+    "node": 725,
+    "snap_dist_m": 41.90318730262208
+  },
+  {
+    "name": "City Hospital",
+    "lat": 11.0193391,
+    "lon": 76.9635166,
+    "kind": "hospital",
+    "node": 2137,
+    "snap_dist_m": 23.059875806484733
+  },
+  {
+    "name": "Bethel Hospital",
+    "lat": 11.0190021,
+    "lon": 76.962084,
+    "kind": "hospital",
+    "node": 32434,
+    "snap_dist_m": 24.3283822902196
+  },
+  {
+    "name": "Arasu Medicals",
+    "lat": 11.010593,
+    "lon": 76.950234,
+    "kind": "hospital",
+    "node": 725,
+    "snap_dist_m": 59.59907626924953
+  },
+  {
+    "name": "The Eye Foundaton",
+    "lat": 11.0134549,
+    "lon": 76.9496753,
+    "kind": "hospital",
+    "node": 483,
+    "snap_dist_m": 36.80886560620626
+  },
+  {
+    "name": "Saravanampatti Police Station",
+    "lat": 11.0747296,
+    "lon": 77.0027116,
+    "kind": "police",
+    "node": 53108,
+    "snap_dist_m": 29.38934129111266
+  },
+  {
+    "name": "Moses Eye Hospital",
+    "lat": 10.9943793,
+    "lon": 76.9664663,
+    "kind": "hospital",
+    "node": 13146,
+    "snap_dist_m": 25.424978250196062
+  },
+  {
+    "name": "Thayarammal poly clinic",
+    "lat": 10.9935069,
+    "lon": 76.9756194,
+    "kind": "hospital",
+    "node": 1124,
+    "snap_dist_m": 31.604810079613532
+  },
+  {
+    "name": "Ramanathapuram police station",
+    "lat": 10.9975827,
+    "lon": 76.997871,
+    "kind": "police",
+    "node": 25015,
+    "snap_dist_m": 46.286630726630726
+  },
+  {
+    "name": "Vasan Eye Care Hospital",
+    "lat": 11.0124743,
+    "lon": 76.9862396,
+    "kind": "hospital",
+    "node": 72266,
+    "snap_dist_m": 42.582622658793895
+  },
+  {
+    "name": "Coimbatore Kidney Centre",
+    "lat": 11.009415,
+    "lon": 76.9893791,
+    "kind": "hospital",
+    "node": 25282,
+    "snap_dist_m": 50.543553245566336
+  },
+  {
+    "name": "B1 POLICE STATION",
+    "lat": 10.9924847,
+    "lon": 76.9591307,
+    "kind": "police",
+    "node": 3327,
+    "snap_dist_m": 23.24443767117548
+  },
+  {
+    "name": "Five Corner",
+    "lat": 10.9953549,
+    "lon": 76.960729,
+    "kind": "neighbourhood",
+    "node": 703,
+    "snap_dist_m": 7.655718986785919
+  },
+  {
+    "name": "Clinic - Dr.Rajashree",
+    "lat": 10.9978977,
+    "lon": 76.9893923,
+    "kind": "hospital",
+    "node": 51424,
+    "snap_dist_m": 24.442318938219575
+  },
+  {
+    "name": "K. J. Hospital",
+    "lat": 10.9414068,
+    "lon": 76.9369908,
+    "kind": "hospital",
+    "node": 33379,
+    "snap_dist_m": 46.94380695560899
+  },
+  {
+    "name": "Kalapatti",
+    "lat": 11.0787684,
+    "lon": 77.0370419,
+    "kind": "suburb",
+    "node": 48350,
+    "snap_dist_m": 28.377163454036253
+  },
+  {
+    "name": "Chinnavedampatti",
+    "lat": 11.0629428,
+    "lon": 76.9843304,
+    "kind": "suburb",
+    "node": 3837,
+    "snap_dist_m": 36.50332168348838
+  },
+  {
+    "name": "Idigarai",
+    "lat": 11.1186987,
+    "lon": 76.9684084,
+    "kind": "suburb",
+    "node": 53883,
+    "snap_dist_m": 9.744237535966306
+  },
+  {
+    "name": "Ashwin Hospital",
+    "lat": 11.0241826,
+    "lon": 76.9731186,
+    "kind": "hospital",
+    "node": 11109,
+    "snap_dist_m": 23.183458702600596
+  },
+  {
+    "name": "Uppilipalayam",
+    "lat": 11.011709,
+    "lon": 77.0213881,
+    "kind": "suburb",
+    "node": 13975,
+    "snap_dist_m": 66.64613837189
+  },
+  {
+    "name": "Red Fields",
+    "lat": 11.0038736,
+    "lon": 76.985983,
+    "kind": "suburb",
+    "node": 56326,
+    "snap_dist_m": 34.73619448840278
+  },
+  {
+    "name": "Krishnaswamy Nagar",
+    "lat": 11.0012196,
+    "lon": 76.999158,
+    "kind": "neighbourhood",
+    "node": 4268,
+    "snap_dist_m": 36.94293789217428
+  },
+  {
+    "name": "Udayampalayam",
+    "lat": 11.010698,
+    "lon": 77.004737,
+    "kind": "suburb",
+    "node": 14382,
+    "snap_dist_m": 25.80173032164331
+  },
+  {
+    "name": "Arya Vaidya Pharmacy",
+    "lat": 10.995609,
+    "lon": 76.9917076,
+    "kind": "hospital",
+    "node": 56459,
+    "snap_dist_m": 26.316124705037776
+  },
+  {
+    "name": "Rathinapuri Police Station",
+    "lat": 11.0250344,
+    "lon": 76.9715748,
+    "kind": "police",
+    "node": 11931,
+    "snap_dist_m": 26.18265651757049
+  },
+  {
+    "name": "Goldwins",
+    "lat": 11.045077,
+    "lon": 77.0473344,
+    "kind": "neighbourhood",
+    "node": 12053,
+    "snap_dist_m": 70.84614812729666
+  },
+  {
+    "name": "Vadavalli Bus Stand",
+    "lat": 11.0267551,
+    "lon": 76.9058305,
+    "kind": "bus_station",
+    "node": 23169,
+    "snap_dist_m": 9.78340817553779
+  },
+  {
+    "name": "Sriram Avenue",
+    "lat": 11.0312517,
+    "lon": 76.8978778,
+    "kind": "neighbourhood",
+    "node": 9841,
+    "snap_dist_m": 34.9577187001751
+  },
+  {
+    "name": "Vadavalli",
+    "lat": 11.0253387,
+    "lon": 76.9051251,
+    "kind": "suburb",
+    "node": 23176,
+    "snap_dist_m": 59.165644083999005
+  },
+  {
+    "name": "Indira Nagar",
+    "lat": 11.0465015,
+    "lon": 77.0443976,
+    "kind": "neighbourhood",
+    "node": 12002,
+    "snap_dist_m": 48.69515948688729
+  },
+  {
+    "name": "Teachers Colony",
+    "lat": 11.0475315,
+    "lon": 77.0468161,
+    "kind": "neighbourhood",
+    "node": 46517,
+    "snap_dist_m": 13.917200193796006
+  },
+  {
+    "name": "Kovai Thirunagar",
+    "lat": 11.0485927,
+    "lon": 77.0430812,
+    "kind": "neighbourhood",
+    "node": 12038,
+    "snap_dist_m": 26.44889709592315
+  },
+  {
+    "name": "Civil Aerodrome",
+    "lat": 11.0369083,
+    "lon": 77.0390349,
+    "kind": "suburb",
+    "node": 20453,
+    "snap_dist_m": 46.300961376298964
+  },
+  {
+    "name": "Vetrivel Nagar",
+    "lat": 11.0454392,
+    "lon": 77.0455467,
+    "kind": "neighbourhood",
+    "node": 12059,
+    "snap_dist_m": 37.89956403336977
+  },
+  {
+    "name": "Argus Nagar",
+    "lat": 11.0276703,
+    "lon": 77.017469,
+    "kind": "neighbourhood",
+    "node": 6991,
+    "snap_dist_m": 27.061287978641978
+  },
+  {
+    "name": "Vasan Eye Care Hospital, Kuniamuthoor",
+    "lat": 10.957713,
+    "lon": 76.9543156,
+    "kind": "hospital",
+    "node": 18113,
+    "snap_dist_m": 30.827791923019777
+  },
+  {
+    "name": "Iswarya Fertility Test Tube Baby and Research Centre",
+    "lat": 11.0173902,
+    "lon": 76.9769123,
+    "kind": "clinic",
+    "node": 26733,
+    "snap_dist_m": 28.299266443746784
+  },
+  {
+    "name": "Clarity Imaging Centre",
+    "lat": 11.0149765,
+    "lon": 76.9642774,
+    "kind": "clinic",
+    "node": 611,
+    "snap_dist_m": 39.199562773322455
+  },
+  {
+    "name": "Microbiological Laboratory",
+    "lat": 11.0234149,
+    "lon": 76.9103076,
+    "kind": "clinic",
+    "node": 60573,
+    "snap_dist_m": 13.555689867741055
+  },
+  {
+    "name": "Ortho One",
+    "lat": 11.0018351,
+    "lon": 77.0328061,
+    "kind": "hospital",
+    "node": 14244,
+    "snap_dist_m": 72.65204436962934
+  },
+  {
+    "name": "Government Urban Primary Health Center",
+    "lat": 11.0827084,
+    "lon": 76.9427442,
+    "kind": "hospital",
+    "node": 13190,
+    "snap_dist_m": 41.24244101297124
+  },
+  {
+    "name": "Karpagam Faculty Of Medical Sciences And Research",
+    "lat": 10.8840061,
+    "lon": 77.0066035,
+    "kind": "hospital",
+    "node": 23551,
+    "snap_dist_m": 111.98679095962987
+  },
+  {
+    "name": "Aravind Eye Hospital (City Centre)",
+    "lat": 11.0153158,
+    "lon": 76.9539881,
+    "kind": "hospital",
+    "node": 692,
+    "snap_dist_m": 63.16313949062007
+  },
+  {
+    "name": "Acupuncture Home",
+    "lat": 10.9923903,
+    "lon": 76.9934918,
+    "kind": "clinic",
+    "node": 3416,
+    "snap_dist_m": 18.062077380933403
+  },
+  {
+    "name": "Lotus Eye Care Hospital, Coimbatore",
+    "lat": 11.0140006,
+    "lon": 76.9543624,
+    "kind": "hospital",
+    "node": 696,
+    "snap_dist_m": 56.084991955286654
+  },
+  {
+    "name": "ECHS",
+    "lat": 11.0051924,
+    "lon": 76.9879176,
+    "kind": "hospital",
+    "node": 13219,
+    "snap_dist_m": 35.29429837692069
+  },
+  {
+    "name": "ECHS Polyclinic",
+    "lat": 11.0053321,
+    "lon": 76.9876533,
+    "kind": "hospital",
+    "node": 13219,
+    "snap_dist_m": 48.072112722350845
+  },
+  {
+    "name": "BKR Heart Center",
+    "lat": 11.0248424,
+    "lon": 76.9564023,
+    "kind": "hospital",
+    "node": 668,
+    "snap_dist_m": 79.86241428311983
+  },
+  {
+    "name": "Baalaje Hospital",
+    "lat": 11.0247244,
+    "lon": 76.9055811,
+    "kind": "hospital",
+    "node": 26149,
+    "snap_dist_m": 26.234044488117682
+  },
+  {
+    "name": "Sri Lakshmi Hospital, Coimbatore",
+    "lat": 11.0782349,
+    "lon": 76.9409348,
+    "kind": "hospital",
+    "node": 55403,
+    "snap_dist_m": 56.3660044258173
+  },
+  {
+    "name": "Rex Ortho Hospital",
+    "lat": 11.008577,
+    "lon": 76.9563626,
+    "kind": "clinic",
+    "node": 554,
+    "snap_dist_m": 68.62314030385005
+  },
+  {
+    "name": "Vijaya Hospitals",
+    "lat": 11.0148532,
+    "lon": 76.9489909,
+    "kind": "hospital",
+    "node": 682,
+    "snap_dist_m": 79.74078647918068
+  },
+  {
+    "name": "Shri Hari Hospital, Coimbatore",
+    "lat": 11.0265248,
+    "lon": 76.9475939,
+    "kind": "hospital",
+    "node": 1481,
+    "snap_dist_m": 25.60291269818483
+  },
+  {
+    "name": "Singanallur",
+    "lat": 11.0124691,
+    "lon": 77.0391191,
+    "kind": "station",
+    "node": 20129,
+    "snap_dist_m": 86.2256614744461
+  },
+  {
+    "name": "Irugur Junction",
+    "lat": 11.0159443,
+    "lon": 77.0678212,
+    "kind": "station",
+    "node": 33071,
+    "snap_dist_m": 101.15799960375506
+  },
+  {
+    "name": "Coimbatore North",
+    "lat": 11.0183356,
+    "lon": 76.9557215,
+    "kind": "station",
+    "node": 72184,
+    "snap_dist_m": 57.29970287216956
+  },
+  {
+    "name": "Pethanaickenpalayam",
+    "lat": 11.1160667,
+    "lon": 77.0430875,
+    "kind": "bus_station",
+    "node": 2802,
+    "snap_dist_m": 19.09091216186087
+  },
+  {
+    "name": "Bethesda Hospital",
+    "lat": 11.0354039,
+    "lon": 76.9304803,
+    "kind": "hospital",
+    "node": 39253,
+    "snap_dist_m": 22.398289830608242
+  },
+  {
+    "name": "Kiruba Hospital, Koilmedu,Coimbatore",
+    "lat": 11.0335068,
+    "lon": 76.929457,
+    "kind": "hospital",
+    "node": 1778,
+    "snap_dist_m": 52.845805798576436
+  },
+  {
+    "name": "ESI Bus Stop",
+    "lat": 11.0071149,
+    "lon": 77.0109984,
+    "kind": "bus_station",
+    "node": 13568,
+    "snap_dist_m": 37.94858817665623
+  },
+  {
+    "name": "G R Hospital",
+    "lat": 11.0093491,
+    "lon": 77.0024216,
+    "kind": "hospital",
+    "node": 3150,
+    "snap_dist_m": 18.585527278375924
+  },
+  {
+    "name": "Nanjundapuram",
+    "lat": 11.1163335,
+    "lon": 77.0482202,
+    "kind": "bus_station",
+    "node": 50345,
+    "snap_dist_m": 26.81814247558501
+  },
+  {
+    "name": "TNAU Hospital",
+    "lat": 11.0080012,
+    "lon": 76.9362691,
+    "kind": "hospital",
+    "node": 57371,
+    "snap_dist_m": 41.24800137569228
+  },
+  {
+    "name": "Madukkarai",
+    "lat": 10.9006591,
+    "lon": 76.9424838,
+    "kind": "station",
+    "node": 12617,
+    "snap_dist_m": 128.7237131524159
+  },
+  {
+    "name": "Apollo Clinic",
+    "lat": 11.0151259,
+    "lon": 76.9516784,
+    "kind": "clinic",
+    "node": 691,
+    "snap_dist_m": 51.439277067606554
+  },
+  {
+    "name": "Vimal jothi",
+    "lat": 11.087657,
+    "lon": 77.003366,
+    "kind": "hospital",
+    "node": 22288,
+    "snap_dist_m": 106.29794091264502
+  },
+  {
+    "name": "Peelamedu",
+    "lat": 11.0327533,
+    "lon": 77.0000305,
+    "kind": "station",
+    "node": 3238,
+    "snap_dist_m": 42.674439179410406
+  },
+  {
+    "name": "Saibaba Colony",
+    "lat": 11.024334,
+    "lon": 76.9447875,
+    "kind": "suburb",
+    "node": 1437,
+    "snap_dist_m": 64.03115560046069
+  },
+  {
+    "name": "Siddhapudur",
+    "lat": 11.0208062,
+    "lon": 76.9765127,
+    "kind": "suburb",
+    "node": 18264,
+    "snap_dist_m": 35.43811824283331
+  },
+  {
+    "name": "KNG Pudur Pirivu",
+    "lat": 11.0533111,
+    "lon": 76.9199558,
+    "kind": "neighbourhood",
+    "node": 22856,
+    "snap_dist_m": 28.244351778257265
+  },
+  {
+    "name": "Somayampalayam",
+    "lat": 11.0468051,
+    "lon": 76.8994356,
+    "kind": "suburb",
+    "node": 60799,
+    "snap_dist_m": 90.38709930036876
+  },
+  {
+    "name": "Telugupalayam Hospital",
+    "lat": 10.9842757,
+    "lon": 76.9297655,
+    "kind": "hospital",
+    "node": 44582,
+    "snap_dist_m": 64.05492130425927
+  },
+  {
+    "name": "Chettipalaiyam",
+    "lat": 10.9162941,
+    "lon": 77.0336203,
+    "kind": "station",
+    "node": 70464,
+    "snap_dist_m": 112.523211934482
+  },
+  {
+    "name": "Podanur Junction",
+    "lat": 10.9640914,
+    "lon": 76.9886998,
+    "kind": "station",
+    "node": 1275,
+    "snap_dist_m": 140.77012145716535
+  },
+  {
+    "name": "Leo Ortho care Hospital",
+    "lat": 10.9969428,
+    "lon": 76.9993022,
+    "kind": "hospital",
+    "node": 51408,
+    "snap_dist_m": 32.884709731163404
+  },
+  {
+    "name": "Eye Trust Hospital",
+    "lat": 11.0242987,
+    "lon": 76.9582327,
+    "kind": "hospital",
+    "node": 26830,
+    "snap_dist_m": 48.16062684543749
+  },
+  {
+    "name": "Microbiological Lab",
+    "lat": 11.021742,
+    "lon": 77.0190105,
+    "kind": "clinic",
+    "node": 6477,
+    "snap_dist_m": 30.60818942607109
+  },
+  {
+    "name": "All women police station",
+    "lat": 11.0821749,
+    "lon": 76.9411896,
+    "kind": "police",
+    "node": 12670,
+    "snap_dist_m": 54.95544817750793
+  },
+  {
+    "name": "\u0bae\u0bb0\u0bc1\u0ba4\u0bae\u0bb2\u0bc8 \u0baa\u0bc7\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1 \u0ba8\u0bbf\u0bb2\u0bc8\u0baf\u0bae\u0bcd",
+    "lat": 11.0434989,
+    "lon": 76.863919,
+    "kind": "bus_station",
+    "node": 16216,
+    "snap_dist_m": 11.032457841081905
+  },
+  {
+    "name": "Vadavalli Bus Stand",
+    "lat": 11.027921,
+    "lon": 76.9059414,
+    "kind": "bus_station",
+    "node": 28417,
+    "snap_dist_m": 35.21532215447137
+  },
+  {
+    "name": "ESI Hospital",
+    "lat": 11.0092807,
+    "lon": 77.0240486,
+    "kind": "hospital",
+    "node": 29937,
+    "snap_dist_m": 95.71600506321231
+  },
+  {
+    "name": "bhagirathi hospital",
+    "lat": 11.0794799,
+    "lon": 76.9409445,
+    "kind": "hospital",
+    "node": 55402,
+    "snap_dist_m": 32.84586646694154
+  },
+  {
+    "name": "Ko Cosmetic",
+    "lat": 11.0206016,
+    "lon": 77.0182915,
+    "kind": "clinic",
+    "node": 6446,
+    "snap_dist_m": 21.102807373403685
+  },
+  {
+    "name": "Bioline",
+    "lat": 11.0364256,
+    "lon": 77.015101,
+    "kind": "clinic",
+    "node": 24694,
+    "snap_dist_m": 32.11905886896225
+  },
+  {
+    "name": "KG Hospital Blood Bank",
+    "lat": 11.0004991,
+    "lon": 76.9716378,
+    "kind": "hospital",
+    "node": 20629,
+    "snap_dist_m": 36.425649199438084
+  },
+  {
+    "name": "PSG Hospital Blood Bank",
+    "lat": 11.0184957,
+    "lon": 77.0069428,
+    "kind": "hospital",
+    "node": 30494,
+    "snap_dist_m": 65.66026107447865
+  },
+  {
+    "name": "Bethel Hospital Pvt. Ltd. - Coimbatore",
+    "lat": 11.0187223,
+    "lon": 76.9612328,
+    "kind": "hospital",
+    "node": 56223,
+    "snap_dist_m": 28.142210972124495
+  },
+  {
+    "name": "Park Hospital, Coimbatore",
+    "lat": 11.0419411,
+    "lon": 77.0379131,
+    "kind": "hospital",
+    "node": 32502,
+    "snap_dist_m": 24.724095977708746
+  },
+  {
+    "name": "Mouthi Hospital Vadavalli, Coimbatore",
+    "lat": 11.0291808,
+    "lon": 76.9019419,
+    "kind": "hospital",
+    "node": 15303,
+    "snap_dist_m": 48.39145577519219
+  },
+  {
+    "name": "Vikaram ENT Hospital, Coimbatore",
+    "lat": 11.0120021,
+    "lon": 76.9494063,
+    "kind": "hospital",
+    "node": 714,
+    "snap_dist_m": 83.97580749487484
+  },
+  {
+    "name": "R. A. Hospital",
+    "lat": 10.998556,
+    "lon": 76.9918562,
+    "kind": "hospital",
+    "node": 28838,
+    "snap_dist_m": 29.064884484985797
+  },
+  {
+    "name": "R V Hospital, Coimbatore",
+    "lat": 11.0546916,
+    "lon": 77.0639178,
+    "kind": "hospital",
+    "node": 50269,
+    "snap_dist_m": 17.751491933767458
+  },
+  {
+    "name": "Vasavi Hospital",
+    "lat": 10.9927872,
+    "lon": 76.9550228,
+    "kind": "hospital",
+    "node": 2173,
+    "snap_dist_m": 81.94437715534379
+  },
+  {
+    "name": "Vallalar Hospitals (Pvt) Ltd",
+    "lat": 11.0218408,
+    "lon": 76.9152537,
+    "kind": "hospital",
+    "node": 15052,
+    "snap_dist_m": 75.67464153007649
+  },
+  {
+    "name": "Sri Ramana Hospital",
+    "lat": 10.9972817,
+    "lon": 76.9598213,
+    "kind": "hospital",
+    "node": 678,
+    "snap_dist_m": 41.4621115061084
+  },
+  {
+    "name": "Sri Rani Poly Clinic",
+    "lat": 10.9949528,
+    "lon": 76.9755752,
+    "kind": "clinic",
+    "node": 25627,
+    "snap_dist_m": 29.246140625078837
+  },
+  {
+    "name": "Sri Sakthi Hospital, Ganapathi, Coimbatore",
+    "lat": 11.0474918,
+    "lon": 76.9930659,
+    "kind": "hospital",
+    "node": 2782,
+    "snap_dist_m": 15.306445384150987
+  },
+  {
+    "name": "Sri Meru Nursing Home, Coimbatore",
+    "lat": 11.0116059,
+    "lon": 76.9606769,
+    "kind": "clinic",
+    "node": 602,
+    "snap_dist_m": 36.36237528122986
+  },
+  {
+    "name": "Sri Loga Clinic",
+    "lat": 11.072535,
+    "lon": 77.0017429,
+    "kind": "clinic",
+    "node": 24905,
+    "snap_dist_m": 44.21917758408116
+  },
+  {
+    "name": "Sri Maruthi Medical Center and Hospital",
+    "lat": 11.0891666,
+    "lon": 76.9384105,
+    "kind": "hospital",
+    "node": 25199,
+    "snap_dist_m": 55.696288214548986
+  },
+  {
+    "name": "Mallika Nursing Home",
+    "lat": 10.9627735,
+    "lon": 76.9574609,
+    "kind": "clinic",
+    "node": 14866,
+    "snap_dist_m": 51.35713976602334
+  },
+  {
+    "name": "Veeku Hospital",
+    "lat": 11.0150799,
+    "lon": 76.9517022,
+    "kind": "hospital",
+    "node": 691,
+    "snap_dist_m": 52.773082173940544
+  },
+  {
+    "name": "Pranav Clinic",
+    "lat": 11.0631074,
+    "lon": 76.9985509,
+    "kind": "hospital",
+    "node": 3893,
+    "snap_dist_m": 14.729338200036581
+  },
+  {
+    "name": "Gowtham Hospital",
+    "lat": 10.962127,
+    "lon": 76.9556397,
+    "kind": "hospital",
+    "node": 42501,
+    "snap_dist_m": 13.441124221548229
+  },
+  {
+    "name": "St Lukes Hospital, Coimbatore",
+    "lat": 11.0335424,
+    "lon": 77.0376261,
+    "kind": "hospital",
+    "node": 20486,
+    "snap_dist_m": 13.97510685987105
+  },
+  {
+    "name": "Sri Guru Hospital Pvt Ltd",
+    "lat": 11.0264336,
+    "lon": 76.9423118,
+    "kind": "hospital",
+    "node": 11227,
+    "snap_dist_m": 54.863969995479586
+  },
+  {
+    "name": "H. S. Hospital",
+    "lat": 11.0418035,
+    "lon": 76.9477855,
+    "kind": "hospital",
+    "node": 2618,
+    "snap_dist_m": 18.325752208190313
+  },
+  {
+    "name": "Vedanayagam Hospital (P) Limited",
+    "lat": 11.0144375,
+    "lon": 76.9504979,
+    "kind": "hospital",
+    "node": 728,
+    "snap_dist_m": 83.05390430447835
+  },
+  {
+    "name": "VGM Hospital",
+    "lat": 10.9986666,
+    "lon": 77.0143291,
+    "kind": "hospital",
+    "node": 32354,
+    "snap_dist_m": 37.24985220126286
+  },
+  {
+    "name": "Dr. Muthu's Ortho Centre-Coimbatore",
+    "lat": 11.0026291,
+    "lon": 77.0406497,
+    "kind": "hospital",
+    "node": 29155,
+    "snap_dist_m": 27.253060601982135
+  },
+  {
+    "name": "Sree Abishek Hospitals",
+    "lat": 11.0430968,
+    "lon": 76.9241157,
+    "kind": "hospital",
+    "node": 44080,
+    "snap_dist_m": 25.924657378869874
+  },
+  {
+    "name": "Sree Andal Hospital",
+    "lat": 11.0560065,
+    "lon": 77.0164575,
+    "kind": "hospital",
+    "node": 7226,
+    "snap_dist_m": 22.332143759251
+  },
+  {
+    "name": "The Arya Vaidya Chikitsalayam and Research Institue",
+    "lat": 10.9958401,
+    "lon": 76.9915813,
+    "kind": "hospital",
+    "node": 25871,
+    "snap_dist_m": 29.645330541588535
+  },
+  {
+    "name": "Kovai Ent Hospital and Research Centre",
+    "lat": 11.041741,
+    "lon": 76.9835246,
+    "kind": "hospital",
+    "node": 32638,
+    "snap_dist_m": 31.36413086267128
+  },
+  {
+    "name": "Koushikha Hospital",
+    "lat": 10.9589868,
+    "lon": 76.9788824,
+    "kind": "hospital",
+    "node": 14734,
+    "snap_dist_m": 36.9898749804547
+  },
+  {
+    "name": "Chinniampalayam Venkateshwara Hospital",
+    "lat": 11.0545152,
+    "lon": 77.0652106,
+    "kind": "hospital",
+    "node": 41090,
+    "snap_dist_m": 53.91741146170881
+  },
+  {
+    "name": "Richmond Hospital",
+    "lat": 10.9946605,
+    "lon": 76.9793813,
+    "kind": "hospital",
+    "node": 27304,
+    "snap_dist_m": 18.109307612390516
+  },
+  {
+    "name": "Ranga Hospital, Velandipalayam",
+    "lat": 11.0290235,
+    "lon": 76.932096,
+    "kind": "hospital",
+    "node": 4806,
+    "snap_dist_m": 50.72979636682516
+  },
+  {
+    "name": "Rao Hospital",
+    "lat": 11.018513,
+    "lon": 76.9445555,
+    "kind": "hospital",
+    "node": 57256,
+    "snap_dist_m": 35.53460945296212
+  },
+  {
+    "name": "Joseph Hospital, Coimbatore",
+    "lat": 11.017244,
+    "lon": 76.9990446,
+    "kind": "hospital",
+    "node": 15681,
+    "snap_dist_m": 35.30191282919815
+  },
+  {
+    "name": "Ramvel Hospital",
+    "lat": 11.01362,
+    "lon": 77.0222618,
+    "kind": "hospital",
+    "node": 14001,
+    "snap_dist_m": 28.68737118475534
+  },
+  {
+    "name": "Immaculate Conception Convent Hospital",
+    "lat": 10.9943683,
+    "lon": 76.9642074,
+    "kind": "hospital",
+    "node": 13142,
+    "snap_dist_m": 46.118393300890055
+  },
+  {
+    "name": "Sree Ramm Nursing Home",
+    "lat": 11.0898944,
+    "lon": 76.9423681,
+    "kind": "clinic",
+    "node": 55026,
+    "snap_dist_m": 41.49761742240805
+  },
+  {
+    "name": "Paari Nursing Home",
+    "lat": 11.0321465,
+    "lon": 76.9761197,
+    "kind": "clinic",
+    "node": 26386,
+    "snap_dist_m": 87.04654925113904
+  },
+  {
+    "name": "S.M.Clinic, Podhanur, Coimbatore",
+    "lat": 10.9553739,
+    "lon": 76.9898473,
+    "kind": "clinic",
+    "node": 71230,
+    "snap_dist_m": 29.176114907280848
+  },
+  {
+    "name": "Vasan Eye Care Hospital, Coimbatore",
+    "lat": 11.0091245,
+    "lon": 76.9454058,
+    "kind": "hospital",
+    "node": 22928,
+    "snap_dist_m": 95.21464821218355
+  },
+  {
+    "name": "Sri Durga Poly Clinic",
+    "lat": 10.9980729,
+    "lon": 77.0001926,
+    "kind": "clinic",
+    "node": 15648,
+    "snap_dist_m": 21.99050045839385
+  },
+  {
+    "name": "Parthiban Nursing Home",
+    "lat": 11.0597504,
+    "lon": 76.9441089,
+    "kind": "clinic",
+    "node": 42183,
+    "snap_dist_m": 15.419154744221638
+  },
+  {
+    "name": "Siloam Thomas Eye Hospital",
+    "lat": 11.0276019,
+    "lon": 76.9415045,
+    "kind": "clinic",
+    "node": 28658,
+    "snap_dist_m": 17.981902238677968
+  },
+  {
+    "name": "Krithika Hospital , Tiruppur",
+    "lat": 11.0424742,
+    "lon": 76.9476856,
+    "kind": "hospital",
+    "node": 2623,
+    "snap_dist_m": 52.41089905966251
+  },
+  {
+    "name": "Lotus Eye Care Hospital Ltd, Coimbatore",
+    "lat": 11.0406116,
+    "lon": 77.0401856,
+    "kind": "hospital",
+    "node": 72323,
+    "snap_dist_m": 62.52961107915722
+  },
+  {
+    "name": "Nandha Hospital",
+    "lat": 11.0168636,
+    "lon": 76.9756664,
+    "kind": "hospital",
+    "node": 807,
+    "snap_dist_m": 50.485107580794434
+  },
+  {
+    "name": "Nataraj Medical Care Center Private Limited",
+    "lat": 10.994101,
+    "lon": 76.9569379,
+    "kind": "hospital",
+    "node": 2181,
+    "snap_dist_m": 21.83128468162949
+  },
+  {
+    "name": "Ortho One Orthopaedic Speciality Center(A Unit Of Spine Arthroscopic and Joint Replacement Center Pvt Ltd)",
+    "lat": 10.9962048,
+    "lon": 77.0082217,
+    "kind": "hospital",
+    "node": 45342,
+    "snap_dist_m": 66.29810876141174
+  },
+  {
+    "name": "Padmavathy Hospital",
+    "lat": 11.0427427,
+    "lon": 76.9477212,
+    "kind": "hospital",
+    "node": 4579,
+    "snap_dist_m": 59.01472014924986
+  },
+  {
+    "name": "Shree Saravana Nursing Home",
+    "lat": 11.002695,
+    "lon": 76.9513442,
+    "kind": "clinic",
+    "node": 1731,
+    "snap_dist_m": 46.439359984513565
+  },
+  {
+    "name": "Vishnu Ent Hospital - Coimbatore",
+    "lat": 11.0265389,
+    "lon": 76.9470734,
+    "kind": "hospital",
+    "node": 1428,
+    "snap_dist_m": 28.968944739076196
+  },
+  {
+    "name": "Senthil Nursing Home, Coimbatore",
+    "lat": 10.9046622,
+    "lon": 76.9596114,
+    "kind": "clinic",
+    "node": 10540,
+    "snap_dist_m": 34.41281662246188
+  },
+  {
+    "name": "The Balakrishnan Hospital",
+    "lat": 11.0190567,
+    "lon": 76.9625585,
+    "kind": "hospital",
+    "node": 56220,
+    "snap_dist_m": 24.563629637998
+  },
+  {
+    "name": "Swathi Poly Clinic",
+    "lat": 11.0089711,
+    "lon": 76.9989473,
+    "kind": "clinic",
+    "node": 14334,
+    "snap_dist_m": 64.98155766865837
+  },
+  {
+    "name": "Ponnammal Duraisamy Eye Clinic",
+    "lat": 11.010795,
+    "lon": 76.961735,
+    "kind": "clinic",
+    "node": 574,
+    "snap_dist_m": 23.37687264293885
+  },
+  {
+    "name": "Sangeetha Hospital, Coimbatore",
+    "lat": 10.963603,
+    "lon": 76.9563907,
+    "kind": "hospital",
+    "node": 24337,
+    "snap_dist_m": 26.04401553310246
+  },
+  {
+    "name": "Karthick Polyclinic",
+    "lat": 10.9957861,
+    "lon": 76.9876988,
+    "kind": "clinic",
+    "node": 3502,
+    "snap_dist_m": 37.5619734131161
+  },
+  {
+    "name": "Priya Hospital, Coimbatore",
+    "lat": 10.9446403,
+    "lon": 76.9352093,
+    "kind": "hospital",
+    "node": 16433,
+    "snap_dist_m": 46.36257929433985
+  },
+  {
+    "name": "Sumith Hospital",
+    "lat": 11.0261493,
+    "lon": 77.0176752,
+    "kind": "hospital",
+    "node": 1158,
+    "snap_dist_m": 20.032331371827095
+  },
+  {
+    "name": "Rajah Hospital, Coimbatore",
+    "lat": 11.0270299,
+    "lon": 77.0187333,
+    "kind": "hospital",
+    "node": 50357,
+    "snap_dist_m": 29.111596334862885
+  },
+  {
+    "name": "Lalitha Hospital",
+    "lat": 11.0174139,
+    "lon": 76.9617565,
+    "kind": "hospital",
+    "node": 56212,
+    "snap_dist_m": 16.301306238656178
+  },
+  {
+    "name": "Hindusthan Hospital, Coimbatore",
+    "lat": 11.019682,
+    "lon": 76.9947731,
+    "kind": "hospital",
+    "node": 40473,
+    "snap_dist_m": 42.70836186965712
+  },
+  {
+    "name": "Kumaran Hospital, Coimbatore",
+    "lat": 11.0150812,
+    "lon": 76.95132,
+    "kind": "hospital",
+    "node": 691,
+    "snap_dist_m": 87.82271475135573
+  },
+  {
+    "name": "Sankara Eye Hospital, Coimbatore",
+    "lat": 11.0133673,
+    "lon": 76.9553728,
+    "kind": "hospital",
+    "node": 11412,
+    "snap_dist_m": 25.256168367962296
+  },
+  {
+    "name": "C.S.R. Nursing Home, Coimbatore",
+    "lat": 11.0209812,
+    "lon": 76.9661131,
+    "kind": "clinic",
+    "node": 818,
+    "snap_dist_m": 105.58119641900049
+  },
+  {
+    "name": "Madurai Eye Center",
+    "lat": 11.0137122,
+    "lon": 76.951316,
+    "kind": "hospital",
+    "node": 713,
+    "snap_dist_m": 107.12119174714921
+  },
+  {
+    "name": "Vega Ent Hospital",
+    "lat": 11.0142295,
+    "lon": 76.9437897,
+    "kind": "hospital",
+    "node": 488,
+    "snap_dist_m": 33.55862410676328
+  },
+  {
+    "name": "Spt Hospitals",
+    "lat": 11.0143493,
+    "lon": 76.9614293,
+    "kind": "hospital",
+    "node": 717,
+    "snap_dist_m": 39.29248366108177
+  },
+  {
+    "name": "Dr K Padmavathy Hospital",
+    "lat": 11.0081878,
+    "lon": 76.9578948,
+    "kind": "hospital",
+    "node": 555,
+    "snap_dist_m": 45.98810520850745
+  },
+  {
+    "name": "V. G. Hospital, Thudiyalur",
+    "lat": 11.0706896,
+    "lon": 76.9420054,
+    "kind": "hospital",
+    "node": 21458,
+    "snap_dist_m": 55.00968034488156
+  },
+  {
+    "name": "Sri Vishnu Priyaa Hospitals Pvt Ltd",
+    "lat": 11.036949,
+    "lon": 76.927958,
+    "kind": "hospital",
+    "node": 22937,
+    "snap_dist_m": 51.04783686127278
+  },
+  {
+    "name": "Aparna Hospital",
+    "lat": 10.9561995,
+    "lon": 76.9541618,
+    "kind": "hospital",
+    "node": 27718,
+    "snap_dist_m": 36.117312517552854
+  },
+  {
+    "name": "Snekaram Multi Specality Hospital",
+    "lat": 10.987562,
+    "lon": 76.9358088,
+    "kind": "hospital",
+    "node": 3671,
+    "snap_dist_m": 29.040810629201385
+  },
+  {
+    "name": "Maruthi Hospital, Coimbatore",
+    "lat": 11.0031531,
+    "lon": 76.9513019,
+    "kind": "hospital",
+    "node": 1731,
+    "snap_dist_m": 27.47381129299061
+  },
+  {
+    "name": "Roselet Medical ObgandSurgical Centre",
+    "lat": 11.0177943,
+    "lon": 76.9612482,
+    "kind": "hospital",
+    "node": 56230,
+    "snap_dist_m": 22.41562400201547
+  },
+  {
+    "name": "Karthic Nursing Home Pvt. Ltd.",
+    "lat": 10.9909191,
+    "lon": 76.9529521,
+    "kind": "clinic",
+    "node": 11248,
+    "snap_dist_m": 10.03508056679283
+  },
+  {
+    "name": "K.M. Polyclinic",
+    "lat": 11.0061296,
+    "lon": 76.9475555,
+    "kind": "clinic",
+    "node": 535,
+    "snap_dist_m": 69.95372834520717
+  },
+  {
+    "name": "Sruti Hospitals",
+    "lat": 11.0060677,
+    "lon": 76.9525994,
+    "kind": "hospital",
+    "node": 526,
+    "snap_dist_m": 13.599608015561088
+  },
+  {
+    "name": "Shree Sivaa Hospital",
+    "lat": 11.0450728,
+    "lon": 76.9856121,
+    "kind": "hospital",
+    "node": 401,
+    "snap_dist_m": 20.423969628733772
+  },
+  {
+    "name": "Aroghya Nursing Home",
+    "lat": 11.0246121,
+    "lon": 76.911949,
+    "kind": "clinic",
+    "node": 28643,
+    "snap_dist_m": 10.957779323016739
+  },
+  {
+    "name": "Dr. BRJ Ortho Centre",
+    "lat": 11.0340354,
+    "lon": 76.9512209,
+    "kind": "hospital",
+    "node": 46213,
+    "snap_dist_m": 41.20274893300219
+  },
+  {
+    "name": "Geethasree Hospital, Coimbatore",
+    "lat": 11.07196,
+    "lon": 77.002444,
+    "kind": "hospital",
+    "node": 7752,
+    "snap_dist_m": 14.370495237017785
+  },
+  {
+    "name": "J.M.Hospital, Edayarpalayam",
+    "lat": 11.04984,
+    "lon": 76.918862,
+    "kind": "hospital",
+    "node": 72440,
+    "snap_dist_m": 30.179961839806037
+  },
+  {
+    "name": "AR Medical Centre",
+    "lat": 11.04788,
+    "lon": 76.971976,
+    "kind": "hospital",
+    "node": 5598,
+    "snap_dist_m": 17.721593847062078
+  },
+  {
+    "name": "Kamalaprakasam, Kalapatti",
+    "lat": 11.0778,
+    "lon": 77.035681,
+    "kind": "hospital",
+    "node": 31191,
+    "snap_dist_m": 19.361644634302188
+  },
+  {
+    "name": "Coimbatore Medical College Hospital",
+    "lat": 11.0289285,
+    "lon": 77.0237553,
+    "kind": "hospital",
+    "node": 24583,
+    "snap_dist_m": 51.044474877443875
+  },
+  {
+    "name": "SS Hospital Coimbatore",
+    "lat": 11.04761,
+    "lon": 77.000115,
+    "kind": "hospital",
+    "node": 22137,
+    "snap_dist_m": 19.031328844176848
+  },
+  {
+    "name": "Rg Clinic , Coimbatore",
+    "lat": 11.0596676,
+    "lon": 76.9971511,
+    "kind": "clinic",
+    "node": 72171,
+    "snap_dist_m": 23.717925289959947
+  },
+  {
+    "name": "Hem Hospital- Thudiaylur, Coimbatore",
+    "lat": 11.0757442,
+    "lon": 76.9424139,
+    "kind": "hospital",
+    "node": 55338,
+    "snap_dist_m": 64.4625801289518
+  },
+  {
+    "name": "Harini Shravan, Coimbatore",
+    "lat": 11.0703318,
+    "lon": 77.0005452,
+    "kind": "hospital",
+    "node": 26192,
+    "snap_dist_m": 38.13598422187507
+  },
+  {
+    "name": "Ramana Gounder Medical Trust Hospital",
+    "lat": 11.0753938,
+    "lon": 76.939234,
+    "kind": "hospital",
+    "node": 23270,
+    "snap_dist_m": 39.100315767305354
+  },
+  {
+    "name": "Bishop Walsh Memorial Hospital, Coimbatore",
+    "lat": 11.07251,
+    "lon": 76.871537,
+    "kind": "hospital",
+    "node": 46550,
+    "snap_dist_m": 34.98016815924117
+  },
+  {
+    "name": "Malar Hpl Goundanpalayam",
+    "lat": 11.0437293,
+    "lon": 76.9475494,
+    "kind": "hospital",
+    "node": 4600,
+    "snap_dist_m": 22.507789447710678
+  },
+  {
+    "name": "Sai Hospital",
+    "lat": 11.0904781,
+    "lon": 76.9383967,
+    "kind": "hospital",
+    "node": 25195,
+    "snap_dist_m": 37.70043906047739
+  },
+  {
+    "name": "Pavithra Medical Centre",
+    "lat": 11.08088,
+    "lon": 76.869337,
+    "kind": "hospital",
+    "node": 17715,
+    "snap_dist_m": 14.876483453023356
+  },
+  {
+    "name": "V.R.Hospital, Coimbatore",
+    "lat": 11.05642,
+    "lon": 77.001972,
+    "kind": "hospital",
+    "node": 41830,
+    "snap_dist_m": 35.79340972043166
+  },
+  {
+    "name": "Sree Subiksha Hospital",
+    "lat": 11.0287,
+    "lon": 76.897449,
+    "kind": "hospital",
+    "node": 15229,
+    "snap_dist_m": 29.700115349279937
+  },
+  {
+    "name": "Vimal Jothi Hospital",
+    "lat": 11.0892,
+    "lon": 77.008366,
+    "kind": "hospital",
+    "node": 71803,
+    "snap_dist_m": 56.37961444523883
+  },
+  {
+    "name": "Ambal Malumichampatty, Coimbatore",
+    "lat": 10.90265,
+    "lon": 76.997586,
+    "kind": "hospital",
+    "node": 15410,
+    "snap_dist_m": 47.93122775747144
+  },
+  {
+    "name": "Government Hospital, Madukkarai",
+    "lat": 10.9037986,
+    "lon": 76.9635381,
+    "kind": "hospital",
+    "node": 907,
+    "snap_dist_m": 64.45888604024456
+  },
+  {
+    "name": "Natraj Hospital",
+    "lat": 10.9042796,
+    "lon": 76.9586654,
+    "kind": "hospital",
+    "node": 4192,
+    "snap_dist_m": 53.20855800905706
+  },
+  {
+    "name": "I.J.Hospital, Kuniayamuthur, Coimbatore",
+    "lat": 10.95365,
+    "lon": 76.955989,
+    "kind": "hospital",
+    "node": 8767,
+    "snap_dist_m": 22.598622213021386
+  },
+  {
+    "name": "Abirami Hospital, Coimbatore",
+    "lat": 10.95254,
+    "lon": 76.973201,
+    "kind": "hospital",
+    "node": 43958,
+    "snap_dist_m": 46.35059891462659
+  },
+  {
+    "name": "Ganapathy Pc Sundarapuram,",
+    "lat": 10.9521673,
+    "lon": 76.9758815,
+    "kind": "hospital",
+    "node": 23355,
+    "snap_dist_m": 16.85498147089496
+  },
+  {
+    "name": "Ponnaiah Hospital",
+    "lat": 11.0108047,
+    "lon": 76.9530054,
+    "kind": "hospital",
+    "node": 710,
+    "snap_dist_m": 51.82610121151081
+  },
+  {
+    "name": "Rani Nursing Home, Selvapuram, Coimbatore",
+    "lat": 10.9871756,
+    "lon": 76.9392029,
+    "kind": "hospital",
+    "node": 6818,
+    "snap_dist_m": 14.167132870148643
+  },
+  {
+    "name": "Shree Hospital, Puliakulam, Coimbatore",
+    "lat": 11.0064832,
+    "lon": 76.9914482,
+    "kind": "hospital",
+    "node": 5972,
+    "snap_dist_m": 21.429861018456183
+  },
+  {
+    "name": "Sri Meenakshi Hospital, Kuniamuthur",
+    "lat": 10.9567349,
+    "lon": 76.9544328,
+    "kind": "hospital",
+    "node": 64570,
+    "snap_dist_m": 37.60143790044724
+  },
+  {
+    "name": "Shanmuga Hospital Rs Puram",
+    "lat": 11.0029,
+    "lon": 76.948869,
+    "kind": "hospital",
+    "node": 26555,
+    "snap_dist_m": 20.271101137681857
+  },
+  {
+    "name": "Singanallur Government Hospital",
+    "lat": 11.0011,
+    "lon": 77.033733,
+    "kind": "hospital",
+    "node": 1332,
+    "snap_dist_m": 33.04090336840786
+  },
+  {
+    "name": "Podanur Government Hospital",
+    "lat": 10.9664096,
+    "lon": 76.9870623,
+    "kind": "hospital",
+    "node": 9485,
+    "snap_dist_m": 45.331959370043464
+  },
+  {
+    "name": "Medwin Hospital, Coimbatore",
+    "lat": 10.9972946,
+    "lon": 77.0051728,
+    "kind": "hospital",
+    "node": 56692,
+    "snap_dist_m": 45.635828461982854
+  },
+  {
+    "name": "Sudha Hospital",
+    "lat": 11.0168278,
+    "lon": 76.9758131,
+    "kind": "hospital",
+    "node": 807,
+    "snap_dist_m": 34.960534638176945
+  },
+  {
+    "name": "I.C.C Hospital For Women & Children, Coimbatore",
+    "lat": 10.9958251,
+    "lon": 76.9634777,
+    "kind": "hospital",
+    "node": 59812,
+    "snap_dist_m": 82.3497604414169
+  },
+  {
+    "name": "Government Hospital, Kuruchi",
+    "lat": 10.9638671,
+    "lon": 76.97122,
+    "kind": "hospital",
+    "node": 1274,
+    "snap_dist_m": 39.22259109376914
+  },
+  {
+    "name": "Peoples Medical Centre, Coimbatore",
+    "lat": 11.0217448,
+    "lon": 77.0603524,
+    "kind": "hospital",
+    "node": 30362,
+    "snap_dist_m": 23.429866595131564
+  },
+  {
+    "name": "Rk Bai Corporation Health Centre",
+    "lat": 10.9998322,
+    "lon": 76.949604,
+    "kind": "clinic",
+    "node": 182,
+    "snap_dist_m": 24.233291815580465
+  },
+  {
+    "name": "VGM Hospital, Coimbatore",
+    "lat": 10.99819,
+    "lon": 77.014447,
+    "kind": "hospital",
+    "node": 13740,
+    "snap_dist_m": 26.243643806344398
+  },
+  {
+    "name": "Gateway Clinic",
+    "lat": 11.0128764,
+    "lon": 76.9492706,
+    "kind": "clinic",
+    "node": 483,
+    "snap_dist_m": 83.83976307202238
+  },
+  {
+    "name": "Roselet Medical Centre,Coimbatore",
+    "lat": 11.01005,
+    "lon": 77.008874,
+    "kind": "hospital",
+    "node": 13576,
+    "snap_dist_m": 30.86004598782846
+  },
+  {
+    "name": "Karthic Nursing Home",
+    "lat": 10.99135,
+    "lon": 76.95416,
+    "kind": "clinic",
+    "node": 1690,
+    "snap_dist_m": 37.78067468052653
+  },
+  {
+    "name": "Sabari Hospital, Coimbatore",
+    "lat": 11.0254441,
+    "lon": 76.939724,
+    "kind": "hospital",
+    "node": 2379,
+    "snap_dist_m": 23.915995741203513
+  },
+  {
+    "name": "Raksha Medical Centre",
+    "lat": 10.95665,
+    "lon": 76.987019,
+    "kind": "hospital",
+    "node": 71247,
+    "snap_dist_m": 27.116947631232872
+  },
+  {
+    "name": "Dr.Manoharan Hospital, Thadagam, Coimbatore",
+    "lat": 11.0067511,
+    "lon": 76.9452484,
+    "kind": "hospital",
+    "node": 18377,
+    "snap_dist_m": 20.17305269288496
+  },
+  {
+    "name": "Sengottaiah Hospital, Coimbatore",
+    "lat": 11.0225148,
+    "lon": 76.9601579,
+    "kind": "hospital",
+    "node": 21568,
+    "snap_dist_m": 38.14103493704187
+  },
+  {
+    "name": "Sangeetha Hospital, Kuniyamuthur",
+    "lat": 10.9641042,
+    "lon": 76.9562562,
+    "kind": "hospital",
+    "node": 8954,
+    "snap_dist_m": 15.991959468004769
+  },
+  {
+    "name": "Seetharam Hospital, Coimbatore",
+    "lat": 10.99941,
+    "lon": 76.948495,
+    "kind": "hospital",
+    "node": 2988,
+    "snap_dist_m": 39.7037530511181
+  },
+  {
+    "name": "Preethi Medical Centre",
+    "lat": 11.0208486,
+    "lon": 76.9649585,
+    "kind": "hospital",
+    "node": 2120,
+    "snap_dist_m": 115.6664200532025
+  },
+  {
+    "name": "Ishaiah Hospital, Coimbatore",
+    "lat": 11.0154329,
+    "lon": 76.9779193,
+    "kind": "hospital",
+    "node": 34751,
+    "snap_dist_m": 30.208247838782256
+  },
+  {
+    "name": "Manu Hospital- Coimbatore",
+    "lat": 10.99147,
+    "lon": 76.976787,
+    "kind": "hospital",
+    "node": 60112,
+    "snap_dist_m": 16.173754595697144
+  },
+  {
+    "name": "Saraswathi Hospital",
+    "lat": 11.0069868,
+    "lon": 77.071368,
+    "kind": "hospital",
+    "node": 14567,
+    "snap_dist_m": 20.849003922383222
+  },
+  {
+    "name": "Akshaya Maternity Center",
+    "lat": 11.02567,
+    "lon": 76.902176,
+    "kind": "hospital",
+    "node": 15217,
+    "snap_dist_m": 39.199010625502886
+  },
+  {
+    "name": "Muniyappa Hospital, Coimbatore",
+    "lat": 11.0060689,
+    "lon": 76.9527967,
+    "kind": "hospital",
+    "node": 526,
+    "snap_dist_m": 30.525682755519306
+  },
+  {
+    "name": "Rajalakshmi Hospital, Coimbatore",
+    "lat": 11.0044176,
+    "lon": 76.9503459,
+    "kind": "hospital",
+    "node": 1548,
+    "snap_dist_m": 27.947690682551695
+  },
+  {
+    "name": "Sivashantha Mother & Child Health Centre",
+    "lat": 11.0231222,
+    "lon": 76.9136781,
+    "kind": "hospital",
+    "node": 3728,
+    "snap_dist_m": 23.471663155087626
+  },
+  {
+    "name": "Vela Hospital, Singanallur, Coimbatore",
+    "lat": 11.0017873,
+    "lon": 77.0300545,
+    "kind": "hospital",
+    "node": 6099,
+    "snap_dist_m": 35.00847538696408
+  },
+  {
+    "name": "Guru Kirupa Hospital, Pn Palayam, Coimbatore",
+    "lat": 10.9995252,
+    "lon": 76.9511992,
+    "kind": "hospital",
+    "node": 701,
+    "snap_dist_m": 20.470884704383785
+  },
+  {
+    "name": "Sathyan Eye Care Hospital & Coimbatore Glaucoma Foundation",
+    "lat": 10.9980405,
+    "lon": 77.0009615,
+    "kind": "hospital",
+    "node": 29322,
+    "snap_dist_m": 29.27318373150829
+  },
+  {
+    "name": "St. Mary's Hospital",
+    "lat": 10.9626641,
+    "lon": 76.98594,
+    "kind": "hospital",
+    "node": 23708,
+    "snap_dist_m": 22.479301836323312
+  },
+  {
+    "name": "Revathi Hospital, Selvapuram",
+    "lat": 10.9882483,
+    "lon": 76.9400963,
+    "kind": "hospital",
+    "node": 6827,
+    "snap_dist_m": 31.084912189565507
+  },
+  {
+    "name": "ANP Nursing Home",
+    "lat": 11.0070282,
+    "lon": 76.8654305,
+    "kind": "clinic",
+    "node": 59209,
+    "snap_dist_m": 25.938411414528666
+  },
+  {
+    "name": "Nehru Urology Centre",
+    "lat": 11.0248525,
+    "lon": 76.9943296,
+    "kind": "hospital",
+    "node": 5247,
+    "snap_dist_m": 17.15412819933999
+  },
+  {
+    "name": "Om Sakthi Hospital, Coimbatore",
+    "lat": 11.00282,
+    "lon": 76.988996,
+    "kind": "hospital",
+    "node": 5947,
+    "snap_dist_m": 25.863861872971658
+  },
+  {
+    "name": "Sri Bala Medical Centre Hospital",
+    "lat": 10.9967187,
+    "lon": 76.9954568,
+    "kind": "hospital",
+    "node": 51431,
+    "snap_dist_m": 33.707354712202886
+  },
+  {
+    "name": "Santhiya Hospital",
+    "lat": 10.9950877,
+    "lon": 76.9746602,
+    "kind": "hospital",
+    "node": 25284,
+    "snap_dist_m": 28.18259294842344
+  },
+  {
+    "name": "Annai Nursing Home",
+    "lat": 10.99386,
+    "lon": 76.951744,
+    "kind": "clinic",
+    "node": 45228,
+    "snap_dist_m": 14.085338504013839
+  },
+  {
+    "name": "Devi Hospital",
+    "lat": 11.0253792,
+    "lon": 76.9381035,
+    "kind": "hospital",
+    "node": 1393,
+    "snap_dist_m": 30.478934753713677
+  },
+  {
+    "name": "Nithyapriya Clinic",
+    "lat": 11.0190925,
+    "lon": 77.0228879,
+    "kind": "clinic",
+    "node": 6394,
+    "snap_dist_m": 23.762243058839395
+  },
+  {
+    "name": "Sumith Hospital",
+    "lat": 11.0387262,
+    "lon": 76.9228367,
+    "kind": "hospital",
+    "node": 9950,
+    "snap_dist_m": 30.35314361767679
+  },
+  {
+    "name": "Ranjith Dental Hospital",
+    "lat": 11.038389,
+    "lon": 76.926209,
+    "kind": "hospital",
+    "node": 26696,
+    "snap_dist_m": 64.92545821159838
+  },
+  {
+    "name": "Muruganatham Clinic",
+    "lat": 11.0247015,
+    "lon": 76.9437321,
+    "kind": "clinic",
+    "node": 1391,
+    "snap_dist_m": 18.086863250157737
+  },
+  {
+    "name": "Rukmani Ammal Hospital",
+    "lat": 11.025042,
+    "lon": 76.9439008,
+    "kind": "hospital",
+    "node": 1391,
+    "snap_dist_m": 24.68481001324943
+  },
+  {
+    "name": "Onecare Ortho Hospital",
+    "lat": 11.026568,
+    "lon": 76.948798,
+    "kind": "hospital",
+    "node": 1510,
+    "snap_dist_m": 32.376057234411846
+  },
+  {
+    "name": "Harshika's Homoeo Clinic",
+    "lat": 11.0283152,
+    "lon": 76.9391123,
+    "kind": "clinic",
+    "node": 1542,
+    "snap_dist_m": 9.838889201650463
+  },
+  {
+    "name": "Sri Saastha Physiotherapy Centre",
+    "lat": 11.0271382,
+    "lon": 76.9428333,
+    "kind": "clinic",
+    "node": 11225,
+    "snap_dist_m": 29.834891984325193
+  },
+  {
+    "name": "Raaj Dental Hospital",
+    "lat": 11.0263447,
+    "lon": 76.9423976,
+    "kind": "hospital",
+    "node": 1423,
+    "snap_dist_m": 43.602646040540755
+  },
+  {
+    "name": "Kannan Clinic",
+    "lat": 11.027046,
+    "lon": 76.9481906,
+    "kind": "clinic",
+    "node": 1503,
+    "snap_dist_m": 29.418988806819762
+  },
+  {
+    "name": "Aswin Hospital",
+    "lat": 11.0255271,
+    "lon": 76.9515108,
+    "kind": "hospital",
+    "node": 72481,
+    "snap_dist_m": 9.200034505981037
+  },
+  {
+    "name": "ENT Clinic",
+    "lat": 11.0269053,
+    "lon": 76.947927,
+    "kind": "clinic",
+    "node": 1426,
+    "snap_dist_m": 19.441979154746093
+  },
+  {
+    "name": "Gireesh Clinic",
+    "lat": 11.037184,
+    "lon": 76.9231792,
+    "kind": "clinic",
+    "node": 4759,
+    "snap_dist_m": 44.90693833087109
+  },
+  {
+    "name": "Vetri's Homeo Care",
+    "lat": 11.0263805,
+    "lon": 76.9415948,
+    "kind": "clinic",
+    "node": 3657,
+    "snap_dist_m": 51.057557055093746
+  },
+  {
+    "name": "Dr. K. Suresh Clinic",
+    "lat": 11.0300612,
+    "lon": 76.9397208,
+    "kind": "clinic",
+    "node": 1855,
+    "snap_dist_m": 21.990572133343374
+  },
+  {
+    "name": "Karthik Clinic",
+    "lat": 11.038796,
+    "lon": 76.926025,
+    "kind": "clinic",
+    "node": 72458,
+    "snap_dist_m": 23.78061283268554
+  },
+  {
+    "name": "Poornima Clinic",
+    "lat": 11.0256516,
+    "lon": 76.937116,
+    "kind": "clinic",
+    "node": 25372,
+    "snap_dist_m": 25.01045293248381
+  },
+  {
+    "name": "Sakthi Fertility Hospital",
+    "lat": 11.0255323,
+    "lon": 76.9463747,
+    "kind": "hospital",
+    "node": 1401,
+    "snap_dist_m": 40.671847462739535
+  },
+  {
+    "name": "Dr. Rajasekar Clinic",
+    "lat": 11.0369397,
+    "lon": 76.927068,
+    "kind": "clinic",
+    "node": 22936,
+    "snap_dist_m": 23.271657944272818
+  },
+  {
+    "name": "Masani Hospital",
+    "lat": 11.0246928,
+    "lon": 76.9435571,
+    "kind": "hospital",
+    "node": 1469,
+    "snap_dist_m": 25.395873783733588
+  },
+  {
+    "name": "Kandaswamy Sidhq Hospital",
+    "lat": 11.026645,
+    "lon": 76.945987,
+    "kind": "hospital",
+    "node": 849,
+    "snap_dist_m": 14.332495902422751
+  },
+  {
+    "name": "Shree Kanna Clinic",
+    "lat": 11.026359,
+    "lon": 76.948803,
+    "kind": "clinic",
+    "node": 41033,
+    "snap_dist_m": 51.92862029841191
+  },
+  {
+    "name": "P S G Cules Hospital",
+    "lat": 11.045772,
+    "lon": 76.92291,
+    "kind": "hospital",
+    "node": 10007,
+    "snap_dist_m": 65.15030412677687
+  },
+  {
+    "name": "Akshaya Clinic",
+    "lat": 11.0271033,
+    "lon": 76.9496102,
+    "kind": "clinic",
+    "node": 1519,
+    "snap_dist_m": 63.01996557291142
+  },
+  {
+    "name": "Dr. Sumathi Chandrasekaran Clinic",
+    "lat": 11.0313641,
+    "lon": 76.9404132,
+    "kind": "clinic",
+    "node": 11221,
+    "snap_dist_m": 76.51462836388525
+  },
+  {
+    "name": "Paavai ENT Hospital",
+    "lat": 11.0270905,
+    "lon": 76.9416551,
+    "kind": "hospital",
+    "node": 11427,
+    "snap_dist_m": 42.98186343073237
+  },
+  {
+    "name": "Srinivas Hospital",
+    "lat": 11.013248,
+    "lon": 77.0192485,
+    "kind": "hospital",
+    "node": 1163,
+    "snap_dist_m": 25.510555137212798
+  },
+  {
+    "name": "Kavya Ortho Centre",
+    "lat": 11.0150335,
+    "lon": 77.0216931,
+    "kind": "clinic",
+    "node": 14056,
+    "snap_dist_m": 16.46591619927676
+  },
+  {
+    "name": "SM Clinic",
+    "lat": 11.013613,
+    "lon": 77.019663,
+    "kind": "clinic",
+    "node": 13996,
+    "snap_dist_m": 31.159870066966867
+  },
+  {
+    "name": "Chycartist Hospital",
+    "lat": 11.0160902,
+    "lon": 77.0202551,
+    "kind": "hospital",
+    "node": 14083,
+    "snap_dist_m": 16.493821925936526
+  },
+  {
+    "name": "Thiru Physiotherapy Clinic",
+    "lat": 11.0143629,
+    "lon": 77.023391,
+    "kind": "clinic",
+    "node": 14026,
+    "snap_dist_m": 25.28576359002456
+  },
+  {
+    "name": "Nalam Child Care",
+    "lat": 11.0006287,
+    "lon": 77.0306011,
+    "kind": "clinic",
+    "node": 6092,
+    "snap_dist_m": 23.143240171554947
+  },
+  {
+    "name": "Lekha Clinic",
+    "lat": 11.006978,
+    "lon": 77.0273766,
+    "kind": "clinic",
+    "node": 14237,
+    "snap_dist_m": 15.091697634497729
+  },
+  {
+    "name": "Dr. Felix Hospital",
+    "lat": 11.0044086,
+    "lon": 77.0348661,
+    "kind": "hospital",
+    "node": 1333,
+    "snap_dist_m": 31.68706194327091
+  },
+  {
+    "name": "Vista Care Opticals & Eye Clinic",
+    "lat": 11.0101764,
+    "lon": 77.0245161,
+    "kind": "clinic",
+    "node": 13930,
+    "snap_dist_m": 28.11550901853502
+  },
+  {
+    "name": "Vishnu Hospital",
+    "lat": 11.0076298,
+    "lon": 76.9576345,
+    "kind": "hospital",
+    "node": 556,
+    "snap_dist_m": 21.378352166948773
+  },
+  {
+    "name": "Alshifa Healing and Naturopathy Clinic",
+    "lat": 10.998631,
+    "lon": 76.9512758,
+    "kind": "clinic",
+    "node": 706,
+    "snap_dist_m": 67.04196123096047
+  },
+  {
+    "name": "Dr. J K's Homeopathy Clinic",
+    "lat": 11.0046785,
+    "lon": 76.9530101,
+    "kind": "clinic",
+    "node": 1544,
+    "snap_dist_m": 30.72171859608442
+  },
+  {
+    "name": "Arc Fertility Hospital",
+    "lat": 11.012539,
+    "lon": 76.986166,
+    "kind": "hospital",
+    "node": 72266,
+    "snap_dist_m": 33.60588104146402
+  },
+  {
+    "name": "Rex Ortho Hospital",
+    "lat": 11.008405,
+    "lon": 76.956396,
+    "kind": "hospital",
+    "node": 554,
+    "snap_dist_m": 63.365754992269906
+  },
+  {
+    "name": "Shark Clinic",
+    "lat": 11.0188961,
+    "lon": 76.9744842,
+    "kind": "clinic",
+    "node": 28939,
+    "snap_dist_m": 43.399405383324144
+  },
+  {
+    "name": "Dr. B. Nirmala Womens Clinic",
+    "lat": 11.0163044,
+    "lon": 76.9799078,
+    "kind": "clinic",
+    "node": 5005,
+    "snap_dist_m": 37.101331274150176
+  },
+  {
+    "name": "Dr. Karthikeyan Clinic",
+    "lat": 10.9969119,
+    "lon": 76.9995376,
+    "kind": "clinic",
+    "node": 51399,
+    "snap_dist_m": 22.50985992391891
+  },
+  {
+    "name": "Kids Clinic",
+    "lat": 11.0163842,
+    "lon": 76.9812846,
+    "kind": "clinic",
+    "node": 56300,
+    "snap_dist_m": 27.62987112237656
+  },
+  {
+    "name": "N R Hospital",
+    "lat": 11.0112326,
+    "lon": 76.9548289,
+    "kind": "hospital",
+    "node": 464,
+    "snap_dist_m": 44.501625291569084
+  },
+  {
+    "name": "Parvathy Hospitals",
+    "lat": 11.01472,
+    "lon": 76.952299,
+    "kind": "hospital",
+    "node": 715,
+    "snap_dist_m": 36.09765424152423
+  },
+  {
+    "name": "Srigiri Ayurvedic Hospital",
+    "lat": 11.0081541,
+    "lon": 76.9578763,
+    "kind": "hospital",
+    "node": 555,
+    "snap_dist_m": 48.453040931235236
+  },
+  {
+    "name": "K.B.S. Hospital",
+    "lat": 11.0157437,
+    "lon": 76.9842202,
+    "kind": "hospital",
+    "node": 29024,
+    "snap_dist_m": 15.697787852875571
+  },
+  {
+    "name": "Dr. G. Thiagarajan's Memorial Hospital",
+    "lat": 11.00534,
+    "lon": 76.989401,
+    "kind": "hospital",
+    "node": 3144,
+    "snap_dist_m": 22.87606722946121
+  },
+  {
+    "name": "Ramvel Hospital",
+    "lat": 10.9958212,
+    "lon": 76.9963939,
+    "kind": "hospital",
+    "node": 388,
+    "snap_dist_m": 23.566653550249683
+  },
+  {
+    "name": "Shajitha Anwaruddin Clinic",
+    "lat": 10.9905191,
+    "lon": 76.9592219,
+    "kind": "clinic",
+    "node": 59754,
+    "snap_dist_m": 13.792158573065958
+  },
+  {
+    "name": "Sathya Medical Centre & Hospital",
+    "lat": 11.0238937,
+    "lon": 76.9582121,
+    "kind": "hospital",
+    "node": 56187,
+    "snap_dist_m": 47.97035909246538
+  },
+  {
+    "name": "Dr. K Shitra Hospital",
+    "lat": 11.0052314,
+    "lon": 76.9555303,
+    "kind": "hospital",
+    "node": 478,
+    "snap_dist_m": 40.186846046072446
+  },
+  {
+    "name": "Shakthi Clinic",
+    "lat": 11.015452,
+    "lon": 76.981739,
+    "kind": "clinic",
+    "node": 12423,
+    "snap_dist_m": 95.65926021766515
+  },
+  {
+    "name": "Ramakrishna Hospital",
+    "lat": 11.0207084,
+    "lon": 76.972413,
+    "kind": "hospital",
+    "node": 21562,
+    "snap_dist_m": 11.525471170677804
+  },
+  {
+    "name": "Seethalakshmi Maternity Hospital",
+    "lat": 11.0065379,
+    "lon": 76.9600631,
+    "kind": "hospital",
+    "node": 72161,
+    "snap_dist_m": 66.2891926003351
+  },
+  {
+    "name": "Sri Vishnu Priya Hospital",
+    "lat": 10.998711,
+    "lon": 76.951222,
+    "kind": "hospital",
+    "node": 706,
+    "snap_dist_m": 56.78181282136878
+  },
+  {
+    "name": "Arun Urology Hospital",
+    "lat": 11.0143168,
+    "lon": 76.9449938,
+    "kind": "hospital",
+    "node": 28648,
+    "snap_dist_m": 38.64246130936471
+  },
+  {
+    "name": "Vennila Hospital",
+    "lat": 10.9901191,
+    "lon": 76.9421502,
+    "kind": "hospital",
+    "node": 6831,
+    "snap_dist_m": 25.901632346663018
+  },
+  {
+    "name": "R.S Hospital",
+    "lat": 11.0091279,
+    "lon": 76.954667,
+    "kind": "hospital",
+    "node": 468,
+    "snap_dist_m": 62.925774076279325
+  },
+  {
+    "name": "Sayee Kids Care",
+    "lat": 11.015436,
+    "lon": 76.984214,
+    "kind": "clinic",
+    "node": 6629,
+    "snap_dist_m": 23.896311300585698
+  },
+  {
+    "name": "Welcare Hospital",
+    "lat": 10.989403,
+    "lon": 76.961714,
+    "kind": "hospital",
+    "node": 28894,
+    "snap_dist_m": 10.991332342095363
+  },
+  {
+    "name": "Becker Manual Hospital",
+    "lat": 11.020659,
+    "lon": 76.968611,
+    "kind": "hospital",
+    "node": 2123,
+    "snap_dist_m": 21.181545706687274
+  },
+  {
+    "name": "Lakshmi ENT Clinic",
+    "lat": 10.9973118,
+    "lon": 76.9963622,
+    "kind": "clinic",
+    "node": 3081,
+    "snap_dist_m": 23.25488987228072
+  },
+  {
+    "name": "G.K.P Clinics",
+    "lat": 10.9922284,
+    "lon": 76.9516612,
+    "kind": "clinic",
+    "node": 785,
+    "snap_dist_m": 38.07005088188402
+  },
+  {
+    "name": "Narmada Hospital",
+    "lat": 10.9967758,
+    "lon": 77.0071075,
+    "kind": "hospital",
+    "node": 20684,
+    "snap_dist_m": 19.516482909953037
+  },
+  {
+    "name": "Rao Hospital",
+    "lat": 11.0131526,
+    "lon": 76.948405,
+    "kind": "hospital",
+    "node": 491,
+    "snap_dist_m": 103.13304318835212
+  },
+  {
+    "name": "Kamala Prakash Hospital",
+    "lat": 11.007283,
+    "lon": 76.956267,
+    "kind": "hospital",
+    "node": 21493,
+    "snap_dist_m": 66.53555584645376
+  },
+  {
+    "name": "Rafa Hospital",
+    "lat": 11.007011,
+    "lon": 76.992439,
+    "kind": "hospital",
+    "node": 5974,
+    "snap_dist_m": 30.885221856171643
+  },
+  {
+    "name": "Subu Hospital",
+    "lat": 10.9920096,
+    "lon": 76.9520898,
+    "kind": "hospital",
+    "node": 3395,
+    "snap_dist_m": 43.45530249446398
+  },
+  {
+    "name": "Rajagambiram Dental Hospital",
+    "lat": 10.9923475,
+    "lon": 76.9559691,
+    "kind": "hospital",
+    "node": 2175,
+    "snap_dist_m": 26.97029571610328
+  },
+  {
+    "name": "Iswarya Hospital",
+    "lat": 11.0002483,
+    "lon": 76.9518169,
+    "kind": "hospital",
+    "node": 511,
+    "snap_dist_m": 50.577647912313054
+  },
+  {
+    "name": "Anbu Child Care Clinic",
+    "lat": 11.0075989,
+    "lon": 76.9911858,
+    "kind": "clinic",
+    "node": 20618,
+    "snap_dist_m": 16.64278875184412
+  },
+  {
+    "name": "Marutham Health Clinic",
+    "lat": 11.0040562,
+    "lon": 76.9934204,
+    "kind": "clinic",
+    "node": 84,
+    "snap_dist_m": 19.554710947778336
+  },
+  {
+    "name": "Sri Guru Hospital",
+    "lat": 10.9920855,
+    "lon": 76.9574858,
+    "kind": "hospital",
+    "node": 455,
+    "snap_dist_m": 35.180818902398364
+  },
+  {
+    "name": "PGS Hospital",
+    "lat": 11.0153485,
+    "lon": 76.9524368,
+    "kind": "hospital",
+    "node": 691,
+    "snap_dist_m": 42.333944745109136
+  },
+  {
+    "name": "Shree Malar Clinic",
+    "lat": 11.0027982,
+    "lon": 76.9551255,
+    "kind": "clinic",
+    "node": 702,
+    "snap_dist_m": 59.155369237948825
+  },
+  {
+    "name": "K Jagathnathan Hospital",
+    "lat": 10.999154,
+    "lon": 76.951549,
+    "kind": "hospital",
+    "node": 706,
+    "snap_dist_m": 51.90196262583618
+  },
+  {
+    "name": "Mak Hospital",
+    "lat": 11.008435,
+    "lon": 76.9580134,
+    "kind": "hospital",
+    "node": 555,
+    "snap_dist_m": 37.16987310484281
+  },
+  {
+    "name": "Sky speech & hearing care Clinic",
+    "lat": 11.0207277,
+    "lon": 77.0189795,
+    "kind": "clinic",
+    "node": 15812,
+    "snap_dist_m": 16.46164665474899
+  },
+  {
+    "name": "Kovai Scan Center",
+    "lat": 11.0203194,
+    "lon": 76.9610724,
+    "kind": "clinic",
+    "node": 56194,
+    "snap_dist_m": 16.24830993335965
+  },
+  {
+    "name": "Kannampalayam Bus Stop",
+    "lat": 10.9975271,
+    "lon": 77.099384,
+    "kind": "bus_station",
+    "node": 4208,
+    "snap_dist_m": 8.799232158718793
+  },
+  {
+    "name": "Roy Physiotherapy Clinic",
+    "lat": 11.0208777,
+    "lon": 77.0218602,
+    "kind": "clinic",
+    "node": 15482,
+    "snap_dist_m": 26.631644819532184
+  },
+  {
+    "name": "Kalampalayam",
+    "lat": 10.9689649,
+    "lon": 76.8928307,
+    "kind": "suburb",
+    "node": 18006,
+    "snap_dist_m": 25.66849841487029
+  },
+  {
+    "name": "Neelambur",
+    "lat": 11.0644299,
+    "lon": 77.0861309,
+    "kind": "suburb",
+    "node": 47027,
+    "snap_dist_m": 50.00814566920099
+  },
+  {
+    "name": "Kanuvai",
+    "lat": 11.0653183,
+    "lon": 76.9085377,
+    "kind": "suburb",
+    "node": 1136,
+    "snap_dist_m": 11.860808926802074
+  },
+  {
+    "name": "Arunai Hospitals",
+    "lat": 11.0182403,
+    "lon": 76.9246,
+    "kind": "hospital",
+    "node": 9585,
+    "snap_dist_m": 13.33523710317176
+  },
+  {
+    "name": "Peelamedu E2 Police Station",
+    "lat": 11.0253639,
+    "lon": 77.0101634,
+    "kind": "police",
+    "node": 72560,
+    "snap_dist_m": 33.13502138670962
+  },
+  {
+    "name": "Podanur Police Station",
+    "lat": 10.9677575,
+    "lon": 76.9781012,
+    "kind": "police",
+    "node": 15461,
+    "snap_dist_m": 8.043232359445312
+  },
+  {
+    "name": "Ramanathapuram Police Station",
+    "lat": 11.0028259,
+    "lon": 76.9916717,
+    "kind": "police",
+    "node": 57063,
+    "snap_dist_m": 19.603689702263715
+  },
+  {
+    "name": "C1 Katoor Police Station",
+    "lat": 11.0145917,
+    "lon": 76.968262,
+    "kind": "police",
+    "node": 24857,
+    "snap_dist_m": 39.34573350999839
+  },
+  {
+    "name": "Out Post Police Station - Singanallur",
+    "lat": 11.0025957,
+    "lon": 77.0288423,
+    "kind": "police",
+    "node": 6106,
+    "snap_dist_m": 47.889215213000114
+  },
+  {
+    "name": "Rathinapuri B-15 Police Station",
+    "lat": 11.0252974,
+    "lon": 76.9689359,
+    "kind": "police",
+    "node": 56129,
+    "snap_dist_m": 12.420031521352513
+  },
+  {
+    "name": "Thudiyalur Police Station",
+    "lat": 11.0819434,
+    "lon": 76.9412392,
+    "kind": "police",
+    "node": 12670,
+    "snap_dist_m": 31.3780871447897
+  },
+  {
+    "name": "Ukkadam Bus Stand",
+    "lat": 10.9885987,
+    "lon": 76.961668,
+    "kind": "bus_station",
+    "node": 71549,
+    "snap_dist_m": 31.484953669749544
+  },
+  {
+    "name": "Maruthamalai Bus Ticket counter",
+    "lat": 11.0443794,
+    "lon": 76.8623489,
+    "kind": "bus_station",
+    "node": 33250,
+    "snap_dist_m": 21.852539508915545
+  },
+  {
+    "name": "Vellakinar",
+    "lat": 11.0733308,
+    "lon": 76.9558099,
+    "kind": "neighbourhood",
+    "node": 2333,
+    "snap_dist_m": 41.77401993299104
+  },
+  {
+    "name": "B-2 R.S.Puram police station",
+    "lat": 11.0053262,
+    "lon": 76.9500311,
+    "kind": "police",
+    "node": 534,
+    "snap_dist_m": 101.66717813780797
+  },
+  {
+    "name": "Chinniampalayam",
+    "lat": 11.0555211,
+    "lon": 77.0652578,
+    "kind": "suburb",
+    "node": 11144,
+    "snap_dist_m": 30.953226861300305
+  },
+  {
+    "name": "Coimbatore Corporation Urban Health Centre",
+    "lat": 10.9757337,
+    "lon": 76.9959721,
+    "kind": "hospital",
+    "node": 23433,
+    "snap_dist_m": 31.587471233698587
+  },
+  {
+    "name": "Marudhamalai",
+    "lat": 11.0428494,
+    "lon": 76.8651052,
+    "kind": "suburb",
+    "node": 63020,
+    "snap_dist_m": 35.20959879304994
+  },
+  {
+    "name": "Onappalayam",
+    "lat": 11.0088546,
+    "lon": 76.8665579,
+    "kind": "suburb",
+    "node": 41045,
+    "snap_dist_m": 22.701491674274234
+  },
+  {
+    "name": "Veerakeralam",
+    "lat": 11.006103,
+    "lon": 76.9122951,
+    "kind": "suburb",
+    "node": 17961,
+    "snap_dist_m": 31.697770240035926
+  },
+  {
+    "name": "Vedapatti",
+    "lat": 11.0024825,
+    "lon": 76.8924765,
+    "kind": "suburb",
+    "node": 58396,
+    "snap_dist_m": 23.817910997715632
+  },
+  {
+    "name": "Bommanampalayam",
+    "lat": 11.0287247,
+    "lon": 76.8826329,
+    "kind": "suburb",
+    "node": 21138,
+    "snap_dist_m": 23.39959298957119
+  },
+  {
+    "name": "Idayarpalayam",
+    "lat": 11.0394251,
+    "lon": 76.9253881,
+    "kind": "suburb",
+    "node": 72448,
+    "snap_dist_m": 36.34292943058784
+  },
+  {
+    "name": "Velandipalayam",
+    "lat": 11.0292339,
+    "lon": 76.9313624,
+    "kind": "suburb",
+    "node": 28485,
+    "snap_dist_m": 67.84779635848813
+  },
+  {
+    "name": "Kovilmedu",
+    "lat": 11.0332239,
+    "lon": 76.9292809,
+    "kind": "neighbourhood",
+    "node": 1778,
+    "snap_dist_m": 37.877754861587924
+  },
+  {
+    "name": "Seeranaickenpalayam",
+    "lat": 11.0109428,
+    "lon": 76.9243105,
+    "kind": "suburb",
+    "node": 28575,
+    "snap_dist_m": 44.65972434363725
+  },
+  {
+    "name": "Selvapuram",
+    "lat": 10.9886473,
+    "lon": 76.9418339,
+    "kind": "suburb",
+    "node": 264,
+    "snap_dist_m": 36.41028360266925
+  },
+  {
+    "name": "Sundakkamuthur",
+    "lat": 10.9579431,
+    "lon": 76.9225663,
+    "kind": "suburb",
+    "node": 19603,
+    "snap_dist_m": 48.03328343455089
+  },
+  {
+    "name": "Gobi Medical Centre",
+    "lat": 11.0572211,
+    "lon": 76.9709821,
+    "kind": "hospital",
+    "node": 22766,
+    "snap_dist_m": 11.310582855869708
+  },
+  {
+    "name": "Coimbatore North",
+    "lat": 11.0202229,
+    "lon": 76.9546147,
+    "kind": "station",
+    "node": 45323,
+    "snap_dist_m": 69.79975754253533
+  },
+  {
+    "name": "Udayampalayam",
+    "lat": 11.057111,
+    "lon": 76.9686914,
+    "kind": "neighbourhood",
+    "node": 22767,
+    "snap_dist_m": 36.55306498287651
+  },
+  {
+    "name": "Maniyakaranpalayam",
+    "lat": 11.0481388,
+    "lon": 76.9749196,
+    "kind": "neighbourhood",
+    "node": 43412,
+    "snap_dist_m": 64.77351092110908
+  },
+  {
+    "name": "Navavur Pirivu",
+    "lat": 11.0311802,
+    "lon": 76.8909694,
+    "kind": "neighbourhood",
+    "node": 35064,
+    "snap_dist_m": 34.71035693363811
+  },
+  {
+    "name": "Telungupalayam",
+    "lat": 10.9947443,
+    "lon": 76.929437,
+    "kind": "neighbourhood",
+    "node": 28103,
+    "snap_dist_m": 27.223380841982557
+  },
+  {
+    "name": "PN Pudur",
+    "lat": 11.0199092,
+    "lon": 76.9226605,
+    "kind": "suburb",
+    "node": 15089,
+    "snap_dist_m": 35.339794174259836
+  },
+  {
+    "name": "Subramaniapalayam",
+    "lat": 11.0624447,
+    "lon": 76.9334411,
+    "kind": "suburb",
+    "node": 21988,
+    "snap_dist_m": 52.635870571828605
+  },
+  {
+    "name": "Appanaickenpalayam",
+    "lat": 11.0787712,
+    "lon": 76.9244362,
+    "kind": "suburb",
+    "node": 55317,
+    "snap_dist_m": 28.681444227842228
+  },
+  {
+    "name": "Pannimadai",
+    "lat": 11.0853402,
+    "lon": 76.9162623,
+    "kind": "suburb",
+    "node": 50121,
+    "snap_dist_m": 28.336696680465124
+  },
+  {
+    "name": "Kurudampalayam",
+    "lat": 11.0880389,
+    "lon": 76.9378665,
+    "kind": "neighbourhood",
+    "node": 37059,
+    "snap_dist_m": 63.31723479919561
+  },
+  {
+    "name": "DJ Child Clinic (Dr. Thyagarajan)",
+    "lat": 11.0079564,
+    "lon": 77.0754534,
+    "kind": "hospital",
+    "node": 14560,
+    "snap_dist_m": 32.8397234662634
+  },
+  {
+    "name": "Coimbatore Medical College Hospital (CMCH)",
+    "lat": 11.0003,
+    "lon": 76.9688,
+    "kind": "hospital",
+    "node": 13150,
+    "snap_dist_m": 15.344289126230581
+  },
+  {
+    "name": "PSG Hospitals Peelamedu",
+    "lat": 11.0264,
+    "lon": 77.0028,
+    "kind": "hospital",
+    "node": 30500,
+    "snap_dist_m": 22.792934114264526
+  },
+  {
+    "name": "Ganga Hospital Ramnagar",
+    "lat": 11.0205,
+    "lon": 76.9535,
+    "kind": "hospital",
+    "node": 25319,
+    "snap_dist_m": 76.64361232585358
+  },
+  {
+    "name": "GKNM Hospital Pappanaickenpalayam",
+    "lat": 11.0142,
+    "lon": 76.9806,
+    "kind": "hospital",
+    "node": 11387,
+    "snap_dist_m": 24.686091540736392
+  },
+  {
+    "name": "KG Hospital Arts College Road",
+    "lat": 10.9982,
+    "lon": 76.9642,
+    "kind": "hospital",
+    "node": 59820,
+    "snap_dist_m": 33.23474999562917
+  },
+  {
+    "name": "Coimbatore Junction Railway Station",
+    "lat": 10.9984,
+    "lon": 76.9628,
+    "kind": "station",
+    "node": 59838,
+    "snap_dist_m": 50.249089147762106
+  },
+  {
+    "name": "Gandhipuram Central Bus Stand",
+    "lat": 11.0185,
+    "lon": 76.9678,
+    "kind": "bus_station",
+    "node": 3012,
+    "snap_dist_m": 54.862481861161484
+  },
+  {
+    "name": "Ukkadam Bus Stand",
+    "lat": 10.9904,
+    "lon": 76.9575,
+    "kind": "bus_station",
+    "node": 59747,
+    "snap_dist_m": 36.62822397884245
+  },
+  {
+    "name": "Singanallur Bus Stand",
+    "lat": 10.9995,
+    "lon": 77.0268,
+    "kind": "bus_station",
+    "node": 14489,
+    "snap_dist_m": 40.21465539187624
+  },
+  {
+    "name": "Coimbatore International Airport (CJB)",
+    "lat": 11.0298,
+    "lon": 77.0434,
+    "kind": "airport",
+    "node": 32722,
+    "snap_dist_m": 437.2358828205028
+  },
+  {
+    "name": "Tidel Park Coimbatore",
+    "lat": 11.0267,
+    "lon": 77.0292,
+    "kind": "landmark",
+    "node": 13483,
+    "snap_dist_m": 83.35598816863359
+  },
+  {
+    "name": "Avinashi Road G.D. Naidu Expressway Entrance",
+    "lat": 11.0065,
+    "lon": 76.9745,
+    "kind": "flyover",
+    "node": 72405,
+    "snap_dist_m": 120.09023844730099
+  },
+  {
+    "name": "Lakshmi Mills Junction",
+    "lat": 11.0125,
+    "lon": 76.982,
+    "kind": "junction",
+    "node": 56313,
+    "snap_dist_m": 112.68070981032717
+  },
+  {
+    "name": "Hope College Junction Peelamedu",
+    "lat": 11.0255,
+    "lon": 77.0145,
+    "kind": "junction",
+    "node": 72367,
+    "snap_dist_m": 20.26568222259719
+  },
+  {
+    "name": "RS Puram DB Road",
+    "lat": 11.0085,
+    "lon": 76.9482,
+    "kind": "junction",
+    "node": 541,
+    "snap_dist_m": 50.72284817814553
+  },
+  {
+    "name": "Saibaba Colony Junction",
+    "lat": 11.0285,
+    "lon": 76.9452,
+    "kind": "junction",
+    "node": 1506,
+    "snap_dist_m": 55.251730276359815
+  },
+  {
+    "name": "Saravanampatti Tech Corridor",
+    "lat": 11.0825,
+    "lon": 76.9965,
+    "kind": "landmark",
+    "node": 32686,
+    "snap_dist_m": 50.09229618002832
+  },
+  {
+    "name": "Town Hall Heritage Commercial Core",
+    "lat": 10.9955,
+    "lon": 76.9615,
+    "kind": "landmark",
+    "node": 59894,
+    "snap_dist_m": 15.793869843563385
+  },
+  {
+    "name": "Singanallur Lake Boat House",
+    "lat": 10.9925,
+    "lon": 77.025,
+    "kind": "water",
+    "node": 6082,
+    "snap_dist_m": 268.438124329766
+  },
+  {
+    "name": "Periyakulam Lake Ukkadam",
+    "lat": 10.9855,
+    "lon": 76.9525,
+    "kind": "water",
+    "node": 12152,
+    "snap_dist_m": 83.57531324951727
+  }
+]

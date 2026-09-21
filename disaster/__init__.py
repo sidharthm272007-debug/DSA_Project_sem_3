@@ -1,1 +1,0 @@
-"""ResQGraph Disaster Simulation Package."""

@@ -1,11 +1,8 @@
-streamlit>=1.30.0
-osmnx>=2.0.0
-networkx>=3.0
-folium>=0.15.0
-streamlit-folium>=0.17.0
-pandas>=2.0.0
-numpy>=1.24.0
-geopandas>=1.0.0
-shapely>=2.0.0
-matplotlib>=3.8.0
-pytest>=8.0.0
+# Everything needed to RUN the app. Oldest versions listed here were tested (full test suite passes on them).
+streamlit>=1.50
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+pydeck>=0.9
+altair>=5.0
+pyyaml>=6.0.1

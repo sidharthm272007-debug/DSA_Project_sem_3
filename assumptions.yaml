@@ -1,0 +1,162 @@
+# ResQGraph assumptions. Every value is a PLACEHOLDER unless a comment gives a source.
+# The app shows these on the "Data & method" page. Change them here, never in code.
+
+city:
+  name: Coimbatore
+  centre: [11.0168, 76.9558]            # lat, lon (city centre used for default scenarios)
+
+population:
+  # Corporation estimate ~22.00 lakh (Coimbatore Corporation Budget 2023-24); Census 2011 city 15.84 lakh, UA 21.4 lakh.
+  total: 2200000
+  # Spatial distribution = OSM road-density proxy (NOT a census grid). Weight per metre of road, by class.
+  class_weights: {motorway: 0.0, trunk: 0.02, primary: 0.1, secondary: 0.25, tertiary: 0.5, unclassified: 0.7, residential: 1.0, living_street: 1.0, service: 0.4}
+
+hospitals:
+  # Tier by name rules (see scripts/build_derived.py). Tier 1/2 receive emergency patients; tier 3 (clinics, dental, eye) do not.
+  tier1_patterns: ["medical college", "psg hospitals?$", "^psg hospitals? ", "ganga hospital", "gknm", "k\\. ?g\\. hospital", "kg hospital", "ramakrishna", "esi hospital", "kovai medical", "kmch"]
+
+context:
+  time_of_day_speed: {night: 1.0, off_peak: 0.85, peak: 0.65}          # traffic slows everything
+  weather_speed: {clear: 1.0, light_rain: 0.9, heavy_rain: 0.72, storm: 0.55}
+
+impact:
+  slow_minutes: 30            # "cannot reach a hospital in time" threshold
+  severe_minutes: 60
+  cap_minutes: 120
+  golden_minutes: 60          # heuristic: a critical patient should reach a hospital within about an hour of the call
+
+hazards:
+  earthquake:
+    # damage probability per km of road at the epicentre by magnitude: p = p6 * 10**(k*(M-6))   (heuristic)
+    p_per_km_at_m6: 0.10
+    growth_per_magnitude: 0.6
+    felt_radius_km_at_m6: 9.0
+    radius_growth_per_magnitude: 0.5      # radius *= 10**(0.5*(M-6))
+    vulnerability: {bridge: 2.0, flyover: 2.5, tunnel: 1.3, residential: 1.4, arterial: 1.0}
+    aftershocks: [[180, -1.0], [540, -1.3]]      # (minutes after main shock, magnitude change)
+    hospital_outage_p_at_m6: 0.25
+    secondary_fires: 3
+    fire_delay_min: [15, 120]
+  fire:
+    start_radius_m: 120
+    growth_m_per_min_by_severity: [1.0, 2.0, 3.5, 5.0, 7.5]    # radius growth per minute, severity 1..5
+    max_radius_m_by_severity: [200, 350, 600, 900, 1400]
+    contained_after_engines: 2
+    burnout_min_by_severity: [60, 90, 150, 240, 360]
+    smoke_band_m: 250
+  plume:
+    length_km_by_severity: [0.4, 0.8, 1.5, 2.5, 4.0]
+    aspect: 0.35
+    growth_km_per_h: 3.0
+    leak_duration_min_by_severity: [45, 90, 150, 240, 360]
+  flood_zone:
+    # Zone-based flood (no terrain model): extent around the chosen water body.
+    extent_m_by_severity: [150, 300, 500, 800, 1300]
+    rise_min: 120
+    recede_min: 360
+    bridge_fail_severity: 4
+  accident:
+    blocked_edges_by_severity: [1, 1, 2, 3, 4]
+    queue_length_m: 900
+    queue_min_factor: 0.35
+  structure_failure:
+    partial_capacity_factor: 0.35
+  storm:
+    speed_factor_by_severity: [0.9, 0.8, 0.7, 0.6, 0.5]
+    tree_fall_p_per_km_by_severity: [0.01, 0.03, 0.06, 0.1, 0.16]
+    tree_fall_weights: {residential: 1.5, arterial: 0.8}
+  custom:
+
+incidents:
+  baseline_per_1000_per_hour: 0.0027       # ~6 calls/hour citywide (placeholder)
+  hazard_boost_per_1000_per_hour: 0.09     # multiplied by hazard exposure (0..1) (placeholder)
+  max_incidents: 420
+  medical_severity_probs: [0.6, 0.3, 0.1]
+  mix:
+    earthquake: {medical: 0.5, rescue: 0.35, fire: 0.15}
+    fire: {medical: 0.4, fire: 0.4, rescue: 0.2}
+    plume: {medical: 0.55, rescue: 0.25, fire: 0.2}
+    flood_zone: {medical: 0.2, rescue: 0.8}
+    accident: {medical: 1.0}
+    structure_failure: {medical: 0.4, rescue: 0.6}
+    storm: {medical: 0.3, rescue: 0.6, fire: 0.1}
+    custom: {medical: 0.5, rescue: 0.4, fire: 0.1}
+    baseline: {medical: 0.85, fire: 0.05, rescue: 0.10}
+
+response:
+  ambulances_per_tier1: 3
+  fire_engines_per_station: 3
+  rescue_units_per_police_station: 1
+  service_min: {medical: [8, 12, 18], rescue: [25, 40, 60], fire: [30, 60, 90]}    # by severity 1..3
+  hospital_handover_min: 6
+  max_wait_min: 240
+  retry_min: 10
+
+repair:
+  base_min: 25
+  min_per_100m: 6
+  debris_multiplier: {quake: 1.0, storm: 0.6}
+  # how much reconnecting a hospital is worth, in "people" (placeholder weights so crews open hospital access before minor roads)
+  hospital_value_people: {1: 30000, 2: 3000}
+
+advisor:
+  sla_min: {fire: 8, ambulance: 10, hospital: 30}
+  candidate_counts: {facility: 90, link: 40}
+  noise_floor_people: 300
+  # Fire-access numbers are only counted in headline results when at least this many fire stations are mapped.
+  # The OSM extract maps very few (see data_flags in every run), and a service with 2 sources makes every result a cliff-edge artefact.
+  # Judgement call of this tool. Add stations to data/coimbatore/facilities_extra.csv and the fire numbers switch on by themselves.
+  min_fire_stations: 8               # a benefit below this is indistinguishable from noise
+  better_site_ratio: 1.3                # another site nearby that is >=30% better => "better site exists"
+  better_site_radius_m: 2500
+  common_cause_m: 400
+  # Costs in Rs crore. PLACEHOLDERS except flyover (Avinashi Road elevated corridor: Rs 1,791 crore / 10.1 km, press reports).
+  # hospital / hospital_major are order-of-magnitude placeholders for a ~100-bed and a ~500-bed hospital; replace with a real quote.
+  cost_crore: {new_link_per_km: 60, bridge_per_km: 120, fire_station: 12, ambulance_post: 3, hospital: 80, hospital_major: 250, flyover_per_km: 177}
+  # The advisor scores every idea against a fixed set of "worst moments" of different disasters plus a normal day.
+  # counts = how many snapshots of each kind; kind_weight = how much each KIND matters (a policy choice the user can change in the app).
+  portfolio:
+    counts: {earthquake: 6, fire: 6, flood: 3, structure: 4, storm: 1}
+    baseline_weight: 0.25
+    kind_weight: {earthquake: 0.20, fire: 0.20, flood: 0.15, structure: 0.15, storm: 0.05}
+    quake_magnitudes: [5.5, 6.0, 6.5]
+    fire_severity: 3
+    flood_severity: [3, 4]
+    storm_severity: 3
+    seed: 7
+  # Screening rules used to word a verdict. These are judgement calls of this tool, not engineering standards.
+  verdict:
+    strong_multiple: 3             # a benefit of at least this many times the noise floor counts as strong
+    robust_kinds: 2                # "robust" = helps in at least this many kinds of disaster (or a normal day plus one kind)
+    good_value_share: 0.33         # top third of comparable ideas by benefit per crore = good value
+  usefulness:
+    critical_people: 5000          # removing it leaves this many more people beyond 30 min of a hospital (any scenario kind) -> "critical"
+    everyday_minutes: 0.05         # mean minutes added per trip to the main destinations that counts as "useful every day"
+  everyday:
+    activity_centres: 20              # main destinations = the most populated 500 m cells (min 2.5 km apart) + stations + tier-1 hospitals
+    centre_separation_m: 2500
+    cap_minutes: 45
+    trips_per_person_per_day: 0.6     # placeholder: hub trips per person per day, only used to express savings as person-hours/day
+    link_speed_kmh: 40                # placeholder speed of a new link
+    link_detour_factor: 1.25          # road length = straight line x this
+
+traffic:
+  junction_delay_s: 10        # average extra seconds at a junction with 3+ legs (half on local roads); placeholder
+
+routing:
+  # Route advice. How risky is a stretch of road in a scenario, 0..1?  Judgement weights of this tool, NOT measured probabilities.
+  # risk = 1 - (1 - a*exposure)(1 - b*degraded)(1 - c*near_closure)(1 - d*fragile_structure)
+  risk:
+    exposure_weight: 0.9         # a: inside a hazard's footprint (exposure 0..1 at the road's ends)
+    degraded_weight: 0.6         # b: open but slowed. degraded = 1 - factor / degraded_ref, clipped to 0..1
+    degraded_ref: 0.85           #    a road running at or above this share of normal speed counts as not degraded
+    near_closure_m: 200          # c: roads this close to a closed road inherit spillover risk (queues, debris, detours)
+    near_closure_weight: 0.35
+    fragile_weight: 0.5          # d: bridge, flyover or tunnel where the hazard reaches (exposure >= fragile_reach) is likelier to fail next
+    fragile_reach: 0.25
+    high: 0.5                    # a road segment at or above this risk counts as "high-risk" in the route summary
+  # Minutes a traveller will add to avoid one kilometre of full-risk road. The route advice minimises  time + this x risk-km.
+  tolerance_min_per_risk_km: {cautious: 8.0, balanced: 3.0, fastest: 0.5}
+  # Penalties on risk used only to SEARCH for alternative routes (cost = time x (1 + penalty x risk)); reported times are always true times.
+  search_penalties: [0, 0.5, 1.5, 4, 12, 40]
+  max_walk_m: 1500               # if the start is cut off, look for the nearest junction with an open route within this distance

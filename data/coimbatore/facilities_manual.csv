@@ -1,0 +1,6 @@
+name,kind,tier,lat,lon,approx,source,locality
+Coimbatore Medical College Hospital (CMCH),hospital,1,11.0003,76.9688,1,"Trichy Road near Lanka Corner, ~1 km from Coimbatore Junction (Wikipedia 'Coimbatore Medical College'; cmccbe.tn.gov.in). OSM's 'Coimbatore Medical College Hospital' point is the Avinashi Road college campus. Position approximate (+-300 m): verify.",
+GKNM Hospital,hospital,1,11.0142,76.9806,1,"Off Avinashi Road via Netaji Road (Wikipedia 'Avinashi Road, Coimbatore'). Not present in the OSM extract. Position approximate (+-500 m): verify.",
+Ganga Hospital,hospital,1,11.0205,76.9535,1,Mettupalayam Road area. Not present in the OSM extract. Position approximate (+-500 m): verify.,
+Peelamedu Fire Station,fire_station,,,,1,"Listed as 'Station Officer, Peelamedu' in a community-maintained list of Coimbatore fire stations (coimbatorejunction.in/fire-service-number), not an official source. Coordinates unknown: placed at the OSM centre of the locality 'Peelamedu' (error up to ~1-2 km). Verify.",Peelamedu
+Kovai Medical Center and Hospital (KMCH),hospital,1,,,1,"Widely published address: 99 Avinashi Road, Civil Aerodrome Post, Coimbatore. Not present in the OSM extract. Coordinates unknown: placed at the OSM centre of the locality 'Civil Aerodrome' (error up to ~1-2 km). Verify.",Civil Aerodrome
