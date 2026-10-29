@@ -1,5 +1,4 @@
 """Invariants of the disaster simulator, checked on the small toy city."""
-import numpy as np
 import pytest
 
 from sim.engine import Context, Scenario, Simulation

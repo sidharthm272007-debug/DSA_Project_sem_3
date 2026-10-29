@@ -25,7 +25,6 @@ def test_no_unit_or_enum_string_reaches_the_browser_as_a_javascript_expression()
     built = [L.road_layer(paths, "#ffffff", 3, 200, "a"), L.dots(rows, "b"), *L.glow_roads(paths, "#ff0000", "c"),
              *L.hazard_layers([{"type": "circle", "kind": "fire", "level": 1, "lat": 11.0, "lon": 76.9, "radius_m": 500}]),
              L.columns(np.array([11.0]), np.array([76.9]), np.array([10.0]), "d"), L.labels(rows, "e"),
-             *L.link_layers([{"a": (11.0, 76.9), "b": (11.01, 76.91), "tone": "good", "label": "x"}]),
              *L.pick_layers([{"lat": 11.0, "lon": 76.9, "n": 1, "tone": "good", "tip": "t"}]), L.trips([{"path": paths[0]["path"], "ts": [0, 1], "color": [1, 2, 3, 255]}], 1.0)]
     for layer in built:
         spec = json.loads(layer.to_json()) if hasattr(layer, "to_json") else None
@@ -59,7 +58,6 @@ def test_light_mode_draws_flat_cheap_geometry_and_rich_mode_draws_3d():
 
     lat, lon, val = np.array([11.0, 11.01]), np.array([76.9, 76.91]), np.array([10.0, 50.0])
     paths = [{"path": [[76.9, 11.0], [76.91, 11.01]], "tip": "r"}]
-    links = [{"a": (11.0, 76.9), "b": (11.01, 76.91), "tone": "good", "label": "x"}]
     old = L.mode_provider
     try:
         L.mode_provider = lambda: "light"
@@ -67,12 +65,64 @@ def test_light_mode_draws_flat_cheap_geometry_and_rich_mode_draws_3d():
         assert cols["@@type"] == "ScatterplotLayer" and "extruded" not in cols
         assert L.deck([], L.view(11.0, 76.9, 11, 55, -20)).initial_view_state.pitch == 0
         assert L.labels([{"lon": 76.9, "lat": 11.0, "text": "a"}], "t") is None
-        assert [json.loads(x.to_json())["@@type"] for x in L.link_layers(links)] == ["PathLayer"]
         road = json.loads(L.road_layer(paths, "#ffffff", 3, 200, "r").to_json())
         assert not road.get("capRounded") and not road.get("jointRounded")
         L.mode_provider = lambda: "rich"
         assert json.loads(L.columns(lat, lon, val, "c").to_json())["@@type"] == "ColumnLayer"
         assert L.deck([], L.view(11.0, 76.9, 11, 55, -20)).initial_view_state.pitch == 55
-        assert "ArcLayer" in [json.loads(x.to_json())["@@type"] for x in L.link_layers(links)]
     finally:
         L.mode_provider = old
+
+
+def test_declutter_labels_never_keeps_two_overlapping_boxes():
+    """Brute-force check: every pair of KEPT labels must have non-overlapping estimated screen boxes, at several zooms
+    and several synthetic clusters (some deliberately overlapping, some not)."""
+    import itertools
+    import random
+
+    from viz.layers import _mercator_px, declutter_labels
+
+    rng = random.Random(7)
+    for zoom in (9.0, 11.0, 13.0):
+        for _ in range(8):
+            n = rng.randint(3, 25)
+            base_lat, base_lon = 11.0 + rng.uniform(-0.05, 0.05), 76.96 + rng.uniform(-0.05, 0.05)
+            rows = [{"lat": base_lat + rng.uniform(-0.01, 0.01), "lon": base_lon + rng.uniform(-0.01, 0.01), "text": "Hospital " + "X" * rng.randint(1, 20)} for _ in range(n)]
+            kept = declutter_labels(rows, zoom)
+            assert len(kept) <= len(rows)
+            boxes = []
+            for r in kept:
+                x, y = _mercator_px(r["lat"], r["lon"], zoom)
+                w = len(r["text"]) * 13 * 0.62 + 10.0
+                h = 13 * 1.35
+                cy = y - 22
+                boxes.append((x - w / 2 - 4, cy - h / 2 - 4, x + w / 2 + 4, cy + h / 2 + 4))
+            for a, b in itertools.combinations(boxes, 2):
+                overlap = a[0] < b[2] and a[2] > b[0] and a[1] < b[3] and a[3] > b[1]
+                assert not overlap, (zoom, a, b)
+
+
+def test_declutter_labels_keeps_everything_when_points_are_far_apart():
+    from viz.layers import declutter_labels
+
+    rows = [{"lat": 11.0 + i * 0.5, "lon": 76.96, "text": f"Place {i}"} for i in range(5)]      # ~55 km apart: can never collide
+    assert len(declutter_labels(rows, 11.0)) == 5
+
+
+def test_declutter_labels_respects_priority_order():
+    """Earlier rows in the input are the priority order: when two candidates collide, the first one in the list wins."""
+    from viz.layers import declutter_labels
+
+    close = [{"lat": 11.0, "lon": 76.96, "text": "A"}, {"lat": 11.0001, "lon": 76.9601, "text": "B"}]
+    assert [r["text"] for r in declutter_labels(close, 15.0)] == ["A"]
+    assert [r["text"] for r in declutter_labels(close[::-1], 15.0)] == ["B"]
+
+
+def test_mercator_px_is_monotonic_in_lon_and_lat():
+    from viz.layers import _mercator_px
+
+    x1, y1 = _mercator_px(11.0, 76.0, 11.0)
+    x2, y2 = _mercator_px(11.0, 77.0, 11.0)
+    x3, y3 = _mercator_px(12.0, 76.0, 11.0)
+    assert x2 > x1                                   # moving east increases x
+    assert y3 < y1                                   # moving north decreases y (standard screen-space mercator)

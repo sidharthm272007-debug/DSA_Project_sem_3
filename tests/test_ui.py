@@ -1,4 +1,4 @@
-"""Whole-app behaviour through Streamlit's headless runner, on the real city: navigation must not lose the user's settings."""
+"""Whole-app behaviour through Streamlit's headless runner, on the real city."""
 import os
 from pathlib import Path
 
@@ -12,26 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 def app():
     os.chdir(ROOT)
     at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=600)
-    at.run()
+    at.run()                                      # lands on Overview (the default page), so this also covers it
     return at
 
 
 def test_every_page_renders_without_errors(app):
-    for pg in ("ui/pages/route.py", "ui/pages/lab.py", "ui/pages/build.py", "ui/pages/idea.py", "ui/pages/existing.py", "ui/pages/sources.py"):
+    for pg in ("ui/pages/route.py", "ui/pages/lab.py", "ui/pages/sources.py"):
         app.switch_page(pg).run()
         assert not app.exception, (pg, [e.value for e in app.exception])
-
-
-def test_priorities_survive_visiting_pages_without_the_sliders(app):
-    """Regression: Streamlit drops widget state for widgets not drawn on the previous page; the sliders used to come back at zero."""
-    app.switch_page("ui/pages/build.py").run()
-    app.radio(key="prio_preset").set_value("Everyday first").run()
-    w1 = dict(app.session_state["kind_weights"])
-    assert sum(w1.values()) == pytest.approx(1.0) and w1["baseline"] > 0.5
-    app.switch_page("ui/pages/route.py").run()                 # a page with no priority sliders
-    app.switch_page("ui/pages/existing.py").run()
-    w2 = dict(app.session_state["kind_weights"])
-    assert w2 == pytest.approx(w1) and sum(w2.values()) == pytest.approx(1.0)
 
 
 def test_route_page_recommends_and_lifelines_run(app):

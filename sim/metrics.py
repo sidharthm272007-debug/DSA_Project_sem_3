@@ -1,4 +1,4 @@
-"""Access metrics shared by the simulator and the advisor."""
+"""Access metrics used by the simulator and the route recommender."""
 from __future__ import annotations
 
 import numpy as np
@@ -30,7 +30,7 @@ def summarize(city, A: dict, d_any: np.ndarray, d_t1: np.ndarray, d_fire: np.nda
         "mean_t1_min": float((pop * np.minimum(d_t1, cap)).sum() / tot / 60.0),
     }
     if d_fire is not None:
-        sla = A["advisor"]["sla_min"]["fire"] * 60
+        sla = A["standards"]["sla_min"]["fire"] * 60
         out["gt_fire_sla"] = float(pop[d_fire > sla].sum())
         out["mean_fire_min"] = float((pop * np.minimum(d_fire, cap)).sum() / tot / 60.0)
     return out

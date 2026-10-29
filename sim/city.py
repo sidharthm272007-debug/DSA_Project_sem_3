@@ -1,16 +1,13 @@
-"""CityData: everything the simulator and advisor need to know about a city, loaded once."""
+"""CityData: everything the simulator and the route recommender need to know about a city, loaded once."""
 from __future__ import annotations
 
-import csv
 import json
-import math
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
 
 from store.csr_graph import FLAG_BRIDGE, FLAG_FLYOVER, FLAG_TUNNEL, ROAD_CLASS_NAMES, CSRGraph
-from store.place_trie import Place, PlaceTrie
 from store.spatial_index import KDTree, LocalProjection
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "coimbatore"
@@ -25,7 +22,7 @@ class Facility:
     node: int
     lat: float
     lon: float
-    source: str = "osm"            # osm | manual | user | advisor
+    source: str = "osm"            # osm | manual | user
     approx: bool = False
     note: str = ""
 
@@ -78,9 +75,6 @@ class CityData:
         self.cell_lon = np.bincount(self.cell_id, weights=self.g.lon, minlength=self.n_cells) / cnt
         self.cell_pop = np.bincount(self.cell_id, weights=self.pop, minlength=self.n_cells)
         self._lm_tree = KDTree(np.column_stack(self.proj.to_xy([l["lat"] for l in self.landmarks], [l["lon"] for l in self.landmarks]))) if self.landmarks else None
-        self.trie = PlaceTrie()
-        for l in self.landmarks:
-            self.trie.add(Place(l["name"], l.get("kind", "other"), l["lat"], l["lon"], {"node": l["node"]}))
         self._water_xy = {k: np.column_stack(self.proj.to_xy(v[:, 0], v[:, 1])) for k, v in self.water.items()}
         self._wd_cache: dict[str, np.ndarray] = {}
 

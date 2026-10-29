@@ -1,4 +1,5 @@
-"""ResQGraph: emergency access and infrastructure planning for Coimbatore.
+"""ResQGraph: disaster-response routing and simulation for Coimbatore -- the fastest and safest way through, and a minute-by-minute
+simulation of how the city responds when roads fail.
 
 Start it with:   python -m streamlit run app.py        (or double-click run_windows.bat / run_mac_linux.sh)
 """
@@ -30,7 +31,9 @@ if not _under_streamlit:                            # someone ran `python app.py
     print("This file must be started with Streamlit, not with plain python." + HELP)
     raise SystemExit(1)
 
-st.set_page_config(page_title="ResQGraph · Coimbatore", page_icon="🛰️", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="ResQGraph", page_icon=":material/emergency:", layout="wide", initial_sidebar_state="auto")
+# "auto" (not "expanded"): Streamlit then collapses the sidebar itself on a narrow/phone screen. "expanded" pinned it open on every
+# screen size, which on a phone viewport left only a sliver of the actual page visible behind the nav — this was found in testing.
 
 _REQUIRED = {"numpy": "numpy", "scipy": "scipy", "yaml": "pyyaml", "pandas": "pandas", "pydeck": "pydeck", "altair": "altair"}
 _missing = [pkg for mod, pkg in _REQUIRED.items() if importlib.util.find_spec(mod) is None]
@@ -48,17 +51,17 @@ from ui.state import warm_up  # noqa: E402
 
 warm_up()
 nav = st.navigation({
-    "": [st.Page("ui/pages/home.py", title="Overview", icon="🏙️", default=True)],
-    "In an emergency": [st.Page("ui/pages/route.py", title="Best route now", icon="🧭"), st.Page("ui/pages/lab.py", title="Disaster lab", icon="🌪️")],
-    "Planning the city": [st.Page("ui/pages/build.py", title="Where to build", icon="🏗️"), st.Page("ui/pages/idea.py", title="Test an idea", icon="💡"),
-                          st.Page("ui/pages/existing.py", title="Is it useful?", icon="🔍")],
-    "About": [st.Page("ui/pages/sources.py", title="Data & assumptions", icon="🧾")],
+    "": [st.Page("ui/pages/home.py", title="Overview", icon=":material/location_city:", default=True)],
+    "Disaster response": [st.Page("ui/pages/route.py", title="Best route now", icon=":material/route:"), st.Page("ui/pages/lab.py", title="Disaster lab", icon=":material/storm:")],
+    "About": [st.Page("ui/pages/sources.py", title="Data & assumptions", icon=":material/dataset:")],
 })
 import os  # noqa: E402
 
+from viz.theme import mi  # noqa: E402
+
 with st.sidebar:
-    st.markdown("### ResQGraph")
-    st.caption("Emergency access planning · Coimbatore")
+    st.markdown(f'<div class="brand">{mi("emergency")}<div><div class="name">ResQGraph</div><div class="sub">Coimbatore, India</div></div></div>', unsafe_allow_html=True)
+    st.write("")
     st.session_state.setdefault("visuals", os.environ.get("RESQGRAPH_VISUALS", "light") if os.environ.get("RESQGRAPH_VISUALS", "light") in ("light", "rich", "off") else "light")
     st.radio("Map detail", ["light", "rich", "off"], key="visuals", format_func={"light": "Light: flat 2D (recommended)", "rich": "Rich: 3D (needs a good graphics card)", "off": "No maps: text and tables only"}.get,
              help="If the screen goes blank, freezes or the maps are slow, pick Light, or No maps. Everything except the map pictures works the same.")

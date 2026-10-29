@@ -3,19 +3,16 @@
 [PASS] population equals the stated city estimate (giant component)  (2,181,260)
 [PASS] named water bodies exist and are long  (9 bodies)
 [PASS] named flyovers exist  (34 structures)
-[WARN] fire stations mapped >= advisor threshold  (2 mapped vs 8 needed; fire results are excluded from headline advisor numbers)
+[WARN] fire stations mapped >= standard threshold  (2 mapped vs 8 needed; fire-response numbers run worse than the real city until more are mapped)
 [PASS] no facility is exactly at a hand-typed spot without an 'approx' flag  (5 flagged approximate)
 [PASS] same seed reproduces the same run
 [PASS] different seed gives a different run
 [PASS] no hazard -> no lost access
 [PASS] quake closes roads and kills hospitals
-[PASS] hospital-access field equals networkx on the damaged real network  (M6.5 quake near Nanjundapuram Road (1.8 km away))
-[PASS] first greedy hospital site = brute-force best of the same candidates  (Palladam - Kochi Road (0.6 km away))
-[PASS] new-road shortcut formula equals rebuilding the real graph with the road  (Chycartist Hospital <-> Argus Nagar (0.3 km away))
+[PASS] hospital-access field equals networkx on the earthquake-damaged real network  (160 open hospitals)
 [PASS] fastest route equals networkx shortest path on the earthquake-damaged real network  (6 random trips)
 [PASS] no recommended or alternative route uses a closed road
 [PASS] a cautious traveller is never sent on a riskier route than a hurried one
 [PASS] lifelines conserve people: everyone who can reach a hospital flows into one  (reach 2,175,239, cut 6,021, into hospitals 2,169,639)
-[PASS] top-3 hospital sites are stable under a different scenario sample (within 3 km)  (3 of 3 recur; other seed: ['Palladam - Kochi Road (0.6 km away)', 'Kalampalayam (1.4 km away)', 'Onappalayam (0.6 km away)'])
 
-18 PASS, 1 WARN, 0 FAIL  (101 s)
+15 PASS, 1 WARN, 0 FAIL  (111 s)

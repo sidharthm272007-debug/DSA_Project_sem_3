@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 import json
+import math
 
 import numpy as np
 import pydeck as pdk
 from pydeck.bindings.json_tools import default_serialize
 
 from store.csr_graph import ROAD_CLASS_NAMES
-from viz.theme import HAZARD_COLOR, PAL, TONE, UNIT_COLOR, hex_rgb
+from viz.theme import HAZARD_COLOR, PAL, TONE, hex_rgb
 
 LEVEL_ALPHA = {1: 45, 2: 75, 3: 120}
 
@@ -36,7 +37,7 @@ def deck(layers: list, vs: pdk.ViewState, tooltip: dict | None = None) -> pdk.De
     if mode() != "rich":                                                       # flat, top-down: far cheaper for a weak or software-rendered graphics stack
         vs = pdk.ViewState(latitude=vs.latitude, longitude=vs.longitude, zoom=vs.zoom, pitch=0, bearing=0)
     return CompactDeck(layers=[l for l in layers if l is not None], initial_view_state=vs, map_provider="carto", map_style="dark",
-                       tooltip=tooltip or {"html": "{tip}", "style": {"backgroundColor": "#0F172A", "color": "#E2E8F0", "fontSize": "12px", "border": "1px solid #22314F"}})
+                       tooltip=tooltip or {"html": "{tip}", "style": {"backgroundColor": PAL["bg"], "color": PAL["text"], "fontSize": "12px", "border": f'1px solid {PAL["line"]}'}})
 
 
 # ---- roads -----------------------------------------------------------------------------------------------
@@ -113,7 +114,7 @@ def _fill_alpha(level: int, radius_m: float | None) -> int:
 def hazard_layers(prims: list[dict], id: str = "haz") -> list:
     circles, polys = [], []
     for p in prims:
-        hexcol = HAZARD_COLOR.get(p.get("kind", "custom"), "#FACC15")
+        hexcol = HAZARD_COLOR.get(p.get("kind", "custom"), HAZARD_COLOR["custom"])
         line = hex_rgb(hexcol, 190)
         if p["type"] == "circle":
             circles.append({"lat": p["lat"], "lon": p["lon"], "r": p["radius_m"], "fill": hex_rgb(hexcol, _fill_alpha(p.get("level", 1), p["radius_m"])), "line": line,
@@ -131,7 +132,7 @@ def hazard_layers(prims: list[dict], id: str = "haz") -> list:
 
 
 # ---- people, facilities, incidents -------------------------------------------------------------------------
-def columns(lat, lon, value, id: str, color_hi: str = PAL["red"], color_lo: str = "#7C2D12", radius: float = 230.0, scale: float = 1.0, tip_fmt: str = "{:,.0f} people",
+def columns(lat, lon, value, id: str, color_hi: str = PAL["red"], color_lo: str = PAL["red_tint"], radius: float = 230.0, scale: float = 1.0, tip_fmt: str = "{:,.0f} people",
             max_h: float = 1800.0, pickable: bool = True):
     value = np.asarray(value, dtype=float)
     if not len(value):
@@ -156,9 +157,47 @@ def dots(rows: list[dict], id: str, radius_px: float = 6, stroke: bool = True, p
                      get_radius="r", radius_units="'pixels'", radius_min_pixels=radius_px * 0.6, stroked=stroke, line_width_min_pixels=1.4, pickable=pickable, billboard=True, parameters={"depthTest": False})
 
 
-def labels(rows: list[dict], id: str, size: int = 15):
+def _mercator_px(lat: float, lon: float, zoom: float) -> tuple[float, float]:
+    """Standard Web Mercator projection to pixel space at a given zoom (the same one every slippy map, incl. deck.gl, uses).
+    Approximate, but that is fine here: it only has to rank which labels would collide on screen, not render anything itself."""
+    scale = 256.0 * (2.0 ** zoom)
+    x = (lon + 180.0) / 360.0 * scale
+    siny = min(max(math.sin(math.radians(lat)), -0.9999), 0.9999)
+    y = (0.5 - math.log((1.0 + siny) / (1.0 - siny)) / (4.0 * math.pi)) * scale
+    return x, y
+
+
+def declutter_labels(rows: list[dict], zoom: float, font_px: int = 13, y_offset_px: int = 22, pad_px: float = 4.0) -> list[dict]:
+    """Greedy label placement: keep a label only if its estimated screen box does not overlap one already kept.
+
+    Map label placement is a classic, NP-hard-in-general computational-geometry problem (deciding whether even a FULL
+    non-overlapping assignment exists is itself NP-hard); the standard practical answer is a priority-ordered greedy
+    placement, which is what this is. ``rows`` should already be in priority order (most important label first) --
+    this function only ever discards a label for colliding with one kept earlier, it never reorders or moves text, so
+    the input order IS the priority. Width is estimated from character count (no font metrics available server-side);
+    generous enough that it only ever under-places (skips a label that would actually have fit), never overlaps.
+    """
+    boxes: list[tuple[float, float, float, float]] = []       # accepted (x0, y0, x1, y1) in pixel space at `zoom`
+    kept = []
+    for r in rows:
+        x, y = _mercator_px(r["lat"], r["lon"], zoom)
+        w = len(r["text"]) * font_px * 0.62 + 10.0             # average glyph advance for a condensed sans at this size, plus the outline
+        h = font_px * 1.35
+        cy = y - y_offset_px                                   # TextLayer's get_pixel_offset shifts the label above the anchor point
+        box = (x - w / 2 - pad_px, cy - h / 2 - pad_px, x + w / 2 + pad_px, cy + h / 2 + pad_px)
+        if not any(box[0] < b[2] and box[2] > b[0] and box[1] < b[3] and box[3] > b[1] for b in boxes):
+            boxes.append(box)
+            kept.append(r)
+    return kept
+
+
+def labels(rows: list[dict], id: str, size: int = 15, zoom: float = 11.0, declutter: bool = True):
     if not rows or mode() != "rich":                                           # text is the costliest thing to draw; names stay available on hover
         return None
+    if declutter:
+        rows = declutter_labels(rows, zoom, font_px=size)
+        if not rows:
+            return None
     return pdk.Layer("TextLayer", data=rows, id=id, get_position=["lon", "lat"], get_text="text", get_size=size, get_color=[248, 250, 252, 255],
                      get_pixel_offset=[0, -22], font_weight=700, outline_width=3, outline_color=[10, 16, 32, 255], billboard=True, parameters={"depthTest": False})
 
@@ -174,7 +213,7 @@ def hospital_rows(city, closed: set[int], ratio: dict[int, float | None], tiers=
         elif r is not None and r < 0.7:
             col, state = hex_rgb(PAL["amber"]), f"cut off: reaches {r * 100:.0f}% of its normal catchment"
         else:
-            col, state = hex_rgb(PAL["teal"]), "operating" + (f", {r * 100:.0f}% of normal catchment" if r is not None else "")
+            col, state = hex_rgb(PAL["accent"]), "operating" + (f", {r * 100:.0f}% of normal catchment" if r is not None else "")
         rows.append({"lon": f.lon, "lat": f.lat, "fill": col, "r": 11 if f.tier == 1 else 6, "tip": f"{f.name} (tier {f.tier}): {state}", "text": (f.name.split("(")[0].replace(" Hospitals", "").replace(" Hospital", "").strip()[:20]) if f.tier == 1 else ""})
     return rows
 
@@ -206,21 +245,6 @@ def trips(trip_rows: list[dict], current_time: float, trail: float = 7.0, id: st
         return None
     return pdk.Layer("TripsLayer", data=trip_rows, id=id, get_path="path", get_timestamps="ts", get_color="color", opacity=0.95, width_min_pixels=4, rounded=True,
                      trail_length=trail, current_time=current_time)
-
-
-# ---- advisor -------------------------------------------------------------------------------------------------
-def link_layers(rows: list[dict], id: str = "links") -> list:
-    """rows: {a:(lat,lon), b:(lat,lon), tone, label, w}. Arcs make the connection legible in 3-D; the flat path shows the road itself."""
-    if not rows:
-        return []
-    data = [{"src": [r["a"][1], r["a"][0]], "dst": [r["b"][1], r["b"][0]], "path": [[r["a"][1], r["a"][0]], [r["b"][1], r["b"][0]]],
-             "col": hex_rgb(TONE[r["tone"]][1], 235), "w": r.get("w", 3), "tip": r["label"]} for r in rows]
-    flat = pdk.Layer("PathLayer", data=data, id=id + "_path", get_path="path", get_color="col", get_width=4, width_units="'pixels'", pickable=True)
-    if mode() != "rich":
-        return [flat]
-    return [pdk.Layer("ArcLayer", data=data, id=id + "_arc", get_source_position="src", get_target_position="dst", get_source_color="col", get_target_color="col",
-                      get_width="w", width_min_pixels=2, get_height=0.6, pickable=True, auto_highlight=True),
-            pdk.Layer("PathLayer", data=data, id=id + "_path", get_path="path", get_color="col", get_width=4, width_units="'pixels'", pickable=False)]
 
 
 def pick_layers(rows: list[dict], id: str = "picks") -> list:

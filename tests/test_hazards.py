@@ -1,6 +1,5 @@
 """Behavioural tests for the hazard engine, on the toy city."""
 import numpy as np
-import pytest
 
 from sim.hazards import (Accident, CustomEvent, Earthquake, Fire, FloodZone, GasLeak, HazardContext, Storm, StructureFailure, WorldView)
 

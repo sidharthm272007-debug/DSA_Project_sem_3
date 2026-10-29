@@ -7,12 +7,15 @@ import streamlit as st
 
 from sim.engine import Simulation
 from sim.report import fmt_people
-from ui.components import findings, hero, kpi_row, legend, note, place_picker, timeline_chart, show_map
+from ui.components import findings, kpi_row, legend, note, page_header, place_picker, section, show_map, timeline_chart
 from ui.scenarios import HAZARD_TYPES, NEEDS_PLACE, make_scenario, presets
 from ui.state import base_paths, core, places
 from viz import layers as L
 from viz.anim import TripBook
-from viz.theme import HAZARD_COLOR, PAL, UNIT_COLOR
+from viz.theme import PAL, UNIT_COLOR, mi
+
+HAZARD_ICON = {"earthquake": "earthquake", "fire": "local_fire_department", "plume": "air", "flood_zone": "flood",
+               "structure_failure": "add_road", "accident": "car_crash", "storm": "storm", "custom": "report_problem"}
 
 A, city, router = core()
 PLACES = places()
@@ -26,10 +29,10 @@ ss.setdefault("lab_res", None)
 ss.setdefault("lab_playing", False)
 ss.setdefault("lab_t", 0)
 
-hero("Disaster lab", "Break the city, then watch how help responds",
-     "Combine any hazards, choose the hour and the weather, and run a minute-by-minute simulation on the real roads: damage, dispatch, re-routing, hospital outages, debris clearing.")
+page_header("storm", "Disaster lab",
+            "Combine any hazards, choose the hour and the weather, and run a minute-by-minute simulation: damage, dispatch, re-routing, hospital outages, debris clearing.")
 
-t_build, t_watch, t_find = st.tabs(["1 · Build the scenario", "2 · Watch it unfold", "3 · Findings & data"])
+t_build, t_watch, t_find = st.tabs(["1. Build the scenario", "2. Watch it unfold", "3. Findings & data"])
 
 
 def describe(spec: dict) -> str:
@@ -39,7 +42,7 @@ def describe(spec: dict) -> str:
         where = city.structures[spec["structure"]]["name"]
     bits = {"earthquake": f"magnitude {spec.get('magnitude', 6.0)}", "storm": f"severity {spec.get('severity', 3)}", "custom": f"radius {spec.get('radius_m', 300):.0f} m",
             "structure_failure": spec.get("mode", "collapse")}.get(t, f"severity {spec.get('severity', 3)}")
-    return f"**{HAZARD_TYPES[t]}**" + (f" · {where}" if where else "") + f" · {bits} · starts at minute {spec.get('start_min', 0):.0f}"
+    return f"**{HAZARD_TYPES[t]}**" + (f" near {where}" if where else "") + f", {bits}, starting at minute {spec.get('start_min', 0):.0f}"
 
 
 # ================================================================================================= BUILD
@@ -48,7 +51,8 @@ with t_build:
     cols = st.columns(3)
     for i, (name, p) in enumerate(PRESETS.items()):
         with cols[i % 3]:
-            st.markdown(f'<div class="card tall"><h4>{name}</h4><p>{p["blurb"]}</p></div>', unsafe_allow_html=True)
+            icon = HAZARD_ICON.get(p["specs"][0]["type"], "report_problem")
+            st.markdown(f'<div class="card tall"><h4>{mi(icon)} {name}</h4><p>{p["blurb"]}</p></div>', unsafe_allow_html=True)
             if st.button("Load this scenario", key=f"pre{i}", width="stretch"):
                 ss.lab_specs = [dict(s) for s in p["specs"]]
                 ss.lab_ctx = {"time_of_day": "off_peak", "weather": "clear", "wind_toward_deg": 90, "wind_kmh": 12, **p["ctx"]}
@@ -67,11 +71,11 @@ with t_build:
         for i, s in enumerate(list(ss.lab_specs)):
             a, b = st.columns([8, 1])
             a.markdown(describe(s))
-            if b.button("✕", key=f"rm{i}", help="Remove"):
+            if b.button("", icon=":material/close:", key=f"rm{i}", help="Remove"):
                 ss.lab_specs.pop(i)
                 st.rerun()
 
-        with st.expander("➕ Add a hazard", expanded=not ss.lab_specs):
+        with st.expander("Add a hazard", icon=":material/add:", expanded=not ss.lab_specs):
             htype = st.selectbox("Type", list(HAZARD_TYPES), format_func=HAZARD_TYPES.get, key="add_type")
             spec = {"type": htype}
             if htype in NEEDS_PLACE:
@@ -128,7 +132,7 @@ with t_build:
 
     st.divider()
     b1, b2 = st.columns([1, 3])
-    run = b1.button("▶ Run the simulation", type="primary", width="stretch", disabled=not ss.lab_specs)
+    run = b1.button("Run the simulation", icon=":material/play_arrow:", type="primary", width="stretch", disabled=not ss.lab_specs)
     if not ss.lab_specs:
         b2.markdown('<div class="note" style="padding-top:8px">Add at least one hazard to run.</div>', unsafe_allow_html=True)
     if run:
@@ -154,7 +158,7 @@ with t_watch:
         clon = float(np.mean([h["lon"] for h in hp])) if hp else city.centre[1]
 
         top = st.columns([1, 1, 4])
-        if top[0].button("⏸ Pause" if ss.lab_playing else "▶ Play", width="stretch"):
+        if top[0].button("Pause" if ss.lab_playing else "Play", icon=":material/pause:" if ss.lab_playing else ":material/play_arrow:", width="stretch"):
             ss.lab_playing = not ss.lab_playing
             if ss.lab_playing and ss.lab_t >= T:
                 ss.lab_t = 0
@@ -184,26 +188,26 @@ with t_watch:
             if ("blk", fi) not in cache:
                 cache[("blk", fi)] = L.edge_paths(city, fr["blocked"], 5500, "closed road")
                 cache[("slow", fi)] = L.edge_paths(city, fr["slowed"], 2500, "slowed road")
-            layers = [L.road_layer(base_paths(), "#3B4C6B", 1.1, 130, "base")]
+            layers = [L.road_layer(base_paths(), PAL["line2"], 1.1, 130, "base")]
             if show_cut and len(fr["cut_cells"][0]):
                 idx, ppl = fr["cut_cells"]
-                layers.append(L.columns(city.cell_lat[idx], city.cell_lon[idx], ppl, "cut", color_hi="#F43F5E", color_lo="#7F1D1D", radius=240, max_h=1800, tip_fmt="{:,.0f} people cut off"))
+                layers.append(L.columns(city.cell_lat[idx], city.cell_lon[idx], ppl, "cut", color_hi=PAL["red"], color_lo=PAL["red_tint"], radius=240, max_h=1800, tip_fmt="{:,.0f} people cut off"))
             if show_haz:
                 layers += L.hazard_layers(fr["prims"])
             if show_slow:
                 layers.append(L.road_layer(cache[("slow", fi)], PAL["amber"], 2.2, 220, "slow", True))
             if show_blk:
-                layers += L.glow_roads(cache[("blk", fi)], "#FF3B5C", "blk")
+                layers += L.glow_roads(cache[("blk", fi)], PAL["red"], "blk")
             if show_hosp:
                 rows = L.hospital_rows(city, set(fr["closed_fac"]), fr["hospital_ratio"], tiers=(1,)) + [r for r in L.hospital_rows(city, set(fr["closed_fac"]), {}, tiers=(2,)) if "OUT OF" in r["tip"]]
-                layers += [L.dots(rows, "hosp", 9), L.labels([r for r in rows if r["text"] and ("OUT" in r["tip"] or "cut off" in r["tip"])], "hlab", 13)]
+                layers += [L.dots(rows, "hosp", 9), L.labels([r for r in rows if r["text"] and ("OUT" in r["tip"] or "cut off" in r["tip"])], "hlab", 13, zoom=11.3)]
             if show_inc:
                 layers.append(L.dots(L.incident_rows(city, res.incidents, t), "inc", 5, stroke=True))
             if show_units:
                 layers.append(L.trips(ss.lab_trips.window(t, 7.0), t, 7.0))
             show_map(L.deck(layers, L.view(clat, clon, 11.3, 45, -14)), height=640, key="labmap")
-            legend([("#FF3B5C", "closed road"), (PAL["amber"], "slowed"), (PAL["red"], "people with no route to a hospital"), (PAL["teal"], "hospital working"), (PAL["amber"], "hospital cut off"),
-                    ("#F43F5E", "hospital out"), (UNIT_COLOR["ambulance"], "ambulance"), (UNIT_COLOR["fire"], "fire engine"), (UNIT_COLOR["rescue"], "rescue"), (UNIT_COLOR["crew"], "clearing crew")])
+            legend([(PAL["red"], "closed road"), (PAL["amber"], "slowed"), (PAL["red"], "people with no route to a hospital"), (PAL["accent"], "hospital working"), (PAL["amber"], "hospital cut off"),
+                    (PAL["red"], "hospital out"), (UNIT_COLOR["ambulance"], "ambulance"), (UNIT_COLOR["fire"], "fire engine"), (UNIT_COLOR["rescue"], "rescue"), (UNIT_COLOR["crew"], "clearing crew")])
             st.altair_chart(timeline_chart(res.metrics, base, t), width="stretch")
             if ss.lab_playing and t >= T:
                 ss.lab_playing = False
@@ -220,7 +224,7 @@ with t_find:
         s = res.summary
         base = s["baseline"]
         pk = res.peak
-        st.subheader(res.scenario_name)
+        section("summarize", res.scenario_name)
         kpi_row([
             ("Worst moment", f"{pk['t'] / 60:.1f} h", "when most people were far from care"),
             ("Extra people 30+ min away", fmt_people(max(pk["gt30_any"] - base["gt30_any"], 0)), f"{max(pk['gt30_any'] - base['gt30_any'], 0) / s['population']:.1%} of the city", PAL["amber"]),
@@ -249,10 +253,13 @@ with t_find:
                 st.metric(f"Critical patients delivered within {gd['minutes']} min", f"{gd['within']} of {gd['critical_total']}")
             st.markdown("##### Major hospitals")
             hh = [{"Hospital": n, "Worst reach (share of normal)": f"{r:.0%}", "Status": "out of service" if c else "open, cut off"} for n, r, c in s["hospitals_hit"] if r < 0.7]
-            st.dataframe(pd.DataFrame(hh), hide_index=True, width="stretch") if hh else note("No major hospital lost more than 30% of its usual reach.")
+            if hh:
+                st.dataframe(pd.DataFrame(hh), hide_index=True, width="stretch")
+            else:
+                note("No major hospital lost more than 30% of its usual reach.")
         st.markdown("##### Data")
         d1, d2 = st.columns(2)
-        d1.download_button("⬇ Timeline (CSV)", pd.DataFrame(res.metrics).to_csv(index=False), "timeline.csv", "text/csv", width="stretch")
-        d2.download_button("⬇ Summary (JSON)", json.dumps({k: v for k, v in s.items() if k not in ("baseline",)}, default=float, indent=1), "summary.json", "application/json", width="stretch")
-        if s["data_flags"]["fire_stations_mapped"] < A["advisor"]["min_fire_stations"]:
+        d1.download_button("Timeline (CSV)", pd.DataFrame(res.metrics).to_csv(index=False), "timeline.csv", "text/csv", icon=":material/download:", width="stretch")
+        d2.download_button("Summary (JSON)", json.dumps({k: v for k, v in s.items() if k not in ("baseline",)}, default=float, indent=1), "summary.json", "application/json", icon=":material/download:", width="stretch")
+        if s["data_flags"]["fire_stations_mapped"] < A["standards"]["min_fire_stations"]:
             st.warning(f"Only {s['data_flags']['fire_stations_mapped']} fire station(s) are mapped, so fire-response numbers are pessimistic. See Data & assumptions.")

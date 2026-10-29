@@ -20,6 +20,6 @@ If the screen goes blank, freezes, or the maps are slow:
   - Double-click  run_windows_no_maps.bat  (no map pictures; every result is still there), or
   - In the app's left sidebar, under "Map detail", choose "No maps" (or "Light", the default).
   - Close other programs and browser tabs, and use an up-to-date Chrome or Edge with hardware acceleration ON.
-  The app needs about 1 GB of free memory. Best route now and Disaster lab need less than the planning pages.
+  The app needs well under 1 GB of free memory.
 
 Problems? See README.md, section "Run".

@@ -23,7 +23,7 @@ sys.path.insert(0, str(ROOT))
 from algorithms.scc import strongly_connected_components  # noqa: E402
 from assumptions import load_assumptions  # noqa: E402
 from store.csr_graph import FLAG_BRIDGE, FLAG_FLYOVER, ROAD_CLASS_NAMES, CSRGraph  # noqa: E402
-from store.spatial_index import KDTree, LocalProjection, NodeSnapper  # noqa: E402
+from store.spatial_index import LocalProjection, NodeSnapper  # noqa: E402
 
 TYPED_LANDMARKS = {  # hand-typed in an earlier build with coordinates up to 6.8 km off: dropped
     "Coimbatore Medical College Hospital (CMCH)", "PSG Hospitals Peelamedu", "Ganga Hospital Ramnagar",

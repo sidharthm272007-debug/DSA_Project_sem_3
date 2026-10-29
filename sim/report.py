@@ -17,13 +17,25 @@ def _stats(vals: list[float]) -> dict:
             "max": float(max(vals)) if vals else None}
 
 
+def clean_round(x: float, ndigits: int = 0):
+    """round() that never returns -0.0 (Python's round(-0.00001, 3) does, and that leaks into tables as an ugly, meaningless '-0.0')."""
+    r = round(float(x), ndigits)
+    return 0 if r == 0 else r
+
+
 def fmt_people(x: float) -> str:
+    """Compact people-count formatting. Symmetric in sign (a "-150000" verdict number reads as "-1.5 lakh", not a raw integer),
+    and never prints "-0" for a value that rounds to zero (floating-point noise from aggregation can leave a tiny negative residue)."""
     x = float(x)
-    if x >= 100_000:
-        return f"{x / 100_000:.1f} lakh"
-    if x >= 1000:
-        return f"{x / 1000:.1f}k"
-    return f"{x:.0f}"
+    sign = "-" if x < 0 else ""
+    a = abs(x)
+    if a < 0.5:
+        return "0"
+    if a >= 100_000:
+        return f"{sign}{a / 100_000:.1f} lakh"
+    if a >= 1000:
+        return f"{sign}{a / 1000:.1f}k"
+    return f"{sign}{a:.0f}"
 
 
 def summarize_run(city, A: dict, res) -> tuple[dict, dict]:
@@ -44,7 +56,7 @@ def summarize_run(city, A: dict, res) -> tuple[dict, dict]:
     extra30 = [max(0.0, m["gt30_any"] - base["gt30_any"]) for m in M]
     person_hours = float(sum(extra30) * step / 60.0)
     extra60 = [max(0.0, m["gt60_any"] - base["gt60_any"]) for m in M]
-    noise = float(A["advisor"]["noise_floor_people"])
+    noise = float(A["standards"]["noise_floor_people"])
     peak_extra = extra30[ip]
     never_hit = peak_extra < noise and pk["cut_any"] < noise
     recovered_at = None                                    # first time after the peak that the added burden is down to 10% of its peak
@@ -124,10 +136,10 @@ def findings(city, A: dict, s: dict, pk: dict) -> list[str]:
     h, m = divmod(int(pk["t"]), 60)
     extra = pk["gt30_any"] - base["gt30_any"]
     if s["never_hit"]:
-        out.append(f"No measurable loss of hospital access: fewer than {A['advisor']['noise_floor_people']} extra people fell beyond {slow} minutes of a hospital.")
+        out.append(f"No measurable loss of hospital access: fewer than {A['standards']['noise_floor_people']} extra people fell beyond {slow} minutes of a hospital.")
     else:
         line = f"At the worst moment (hour {h}:{m:02d}) about {fmt_people(max(extra, 0))} more people than normal ({max(extra, 0) / tot:.1%} of the city) were more than {slow} minutes from the nearest open hospital"
-        line += f", and {fmt_people(pk['cut_any'])} had no road route to any hospital at all." if pk["cut_any"] >= A["advisor"]["noise_floor_people"] else "."
+        line += f", and {fmt_people(pk['cut_any'])} had no road route to any hospital at all." if pk["cut_any"] >= A["standards"]["noise_floor_people"] else "."
         out.append(line)
         if pk["gt30_t1"] - base["gt30_t1"] > 0.02 * tot:
             out.append(f"For major (tier-1) hospitals the effect is larger: {fmt_people(pk['gt30_t1'])} people beyond {slow} minutes versus {fmt_people(base['gt30_t1'])} normally.")
@@ -155,7 +167,7 @@ def findings(city, A: dict, s: dict, pk: dict) -> list[str]:
         elif b["total"] >= 3:
             out.append(f"{b['total']} {label}: none received a unit ({b['unserved'] + b['stranded']} unserved).")
     nfs = s["data_flags"]["fire_stations_mapped"]
-    if s["by_kind"]["fire"]["total"] >= 1 and nfs < int(A["advisor"]["min_fire_stations"]):
+    if s["by_kind"]["fire"]["total"] >= 1 and nfs < int(A["standards"]["min_fire_stations"]):
         out.append(f"Data gap: only {nfs} fire station(s) are mapped, so fire-response times and unserved fire calls here are worse than the real city would see. "
                    "Add the missing stations in data/coimbatore/facilities_extra.csv.")
     g = s["golden"]

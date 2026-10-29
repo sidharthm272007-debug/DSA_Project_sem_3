@@ -99,49 +99,13 @@ repair:
   # how much reconnecting a hospital is worth, in "people" (placeholder weights so crews open hospital access before minor roads)
   hospital_value_people: {1: 30000, 2: 3000}
 
-advisor:
+# Service standards used to judge access and to describe findings in the Disaster lab and the route recommender.
+standards:
   sla_min: {fire: 8, ambulance: 10, hospital: 30}
-  candidate_counts: {facility: 90, link: 40}
-  noise_floor_people: 300
-  # Fire-access numbers are only counted in headline results when at least this many fire stations are mapped.
-  # The OSM extract maps very few (see data_flags in every run), and a service with 2 sources makes every result a cliff-edge artefact.
-  # Judgement call of this tool. Add stations to data/coimbatore/facilities_extra.csv and the fire numbers switch on by themselves.
-  min_fire_stations: 8               # a benefit below this is indistinguishable from noise
-  better_site_ratio: 1.3                # another site nearby that is >=30% better => "better site exists"
-  better_site_radius_m: 2500
-  common_cause_m: 400
-  # Costs in Rs crore. PLACEHOLDERS except flyover (Avinashi Road elevated corridor: Rs 1,791 crore / 10.1 km, press reports).
-  # hospital / hospital_major are order-of-magnitude placeholders for a ~100-bed and a ~500-bed hospital; replace with a real quote.
-  cost_crore: {new_link_per_km: 60, bridge_per_km: 120, fire_station: 12, ambulance_post: 3, hospital: 80, hospital_major: 250, flyover_per_km: 177}
-  # The advisor scores every idea against a fixed set of "worst moments" of different disasters plus a normal day.
-  # counts = how many snapshots of each kind; kind_weight = how much each KIND matters (a policy choice the user can change in the app).
-  portfolio:
-    counts: {earthquake: 6, fire: 6, flood: 3, structure: 4, storm: 1}
-    baseline_weight: 0.25
-    kind_weight: {earthquake: 0.20, fire: 0.20, flood: 0.15, structure: 0.15, storm: 0.05}
-    quake_magnitudes: [5.5, 6.0, 6.5]
-    fire_severity: 3
-    flood_severity: [3, 4]
-    storm_severity: 3
-    seed: 7
-  # Screening rules used to word a verdict. These are judgement calls of this tool, not engineering standards.
-  verdict:
-    strong_multiple: 3             # a benefit of at least this many times the noise floor counts as strong
-    robust_kinds: 2                # "robust" = helps in at least this many kinds of disaster (or a normal day plus one kind)
-    good_value_share: 0.33         # top third of comparable ideas by benefit per crore = good value
-  usefulness:
-    critical_people: 5000          # removing it leaves this many more people beyond 30 min of a hospital (any scenario kind) -> "critical"
-    everyday_minutes: 0.05         # mean minutes added per trip to the main destinations that counts as "useful every day"
-  everyday:
-    activity_centres: 20              # main destinations = the most populated 500 m cells (min 2.5 km apart) + stations + tier-1 hospitals
-    centre_separation_m: 2500
-    cap_minutes: 45
-    trips_per_person_per_day: 0.6     # placeholder: hub trips per person per day, only used to express savings as person-hours/day
-    link_speed_kmh: 40                # placeholder speed of a new link
-    link_detour_factor: 1.25          # road length = straight line x this
-
-traffic:
-  junction_delay_s: 10        # average extra seconds at a junction with 3+ legs (half on local roads); placeholder
+  noise_floor_people: 300            # a change below this many people is indistinguishable from noise, not a real effect
+  # Fire-response times and unserved fire calls are worse than the real city would see until at least this many fire stations are mapped.
+  # The OSM extract maps very few (see Data & assumptions). Judgement call of this tool; add stations to data/coimbatore/facilities_extra.csv.
+  min_fire_stations: 8
 
 routing:
   # Route advice. How risky is a stretch of road in a scenario, 0..1?  Judgement weights of this tool, NOT measured probabilities.
@@ -157,6 +121,11 @@ routing:
     high: 0.5                    # a road segment at or above this risk counts as "high-risk" in the route summary
   # Minutes a traveller will add to avoid one kilometre of full-risk road. The route advice minimises  time + this x risk-km.
   tolerance_min_per_risk_km: {cautious: 8.0, balanced: 3.0, fastest: 0.5}
-  # Penalties on risk used only to SEARCH for alternative routes (cost = time x (1 + penalty x risk)); reported times are always true times.
-  search_penalties: [0, 0.5, 1.5, 4, 12, 40]
+  # How many genuinely different routes Yen's algorithm looks for, ranked by pure time (routing/kshortest.py).
+  # The recommendation is then chosen from the Pareto-optimal front of these (routing/pareto.py), not from this list directly.
+  k_shortest: 4
+  # On top of the k_shortest pool, one further search minimises time x (1 + this x risk) to make sure the safest
+  # extreme of the trade-off is represented even if it needs a detour long enough that it would never rank in the
+  # top k_shortest by time alone. Reported times are always true times; this number only steers that one search.
+  safety_search_penalty: 40.0
   max_walk_m: 1500               # if the start is cut off, look for the nearest junction with an open route within this distance

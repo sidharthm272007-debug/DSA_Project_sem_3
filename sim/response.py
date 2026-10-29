@@ -73,7 +73,7 @@ class Resources:
     fire_engines: int | None = None          # None => fire_engines_per_station x mapped stations
     rescue_units: int | None = None          # None => one per police station
     crews: int = 3
-    extra: list[tuple[str, int]] = field(default_factory=list)      # (kind, node) added by the user / advisor
+    extra: list[tuple[str, int]] = field(default_factory=list)      # (kind, node) added by the user
 
 
 def build_units(city: CityData, res: Resources, A: dict) -> list[Unit]:

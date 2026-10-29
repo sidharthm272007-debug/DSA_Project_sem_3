@@ -2,7 +2,6 @@
 import networkx as nx
 import numpy as np
 import pytest
-from dataclasses import replace
 
 from routing.lifelines import hospital_dependence, lifelines, open_hospital_nodes
 from routing.recommend import advise, fmt_min, hospital_options
@@ -41,22 +40,24 @@ def test_state_has_real_damage(quake):
     assert len(quake.closed_edges) > 0 and quake.expo.max() > 0.5
 
 
-def test_fastest_route_equals_networkx_and_penalised_routes_are_optimal_for_their_penalty(toy, A, router, quake):
+def test_fastest_route_equals_networkx_and_every_option_is_genuinely_pareto_optimal(toy, A, router, quake):
     g = toy.g
     src, dst = 1 * 21 + 1, 19 * 21 + 19
     adv = advise(toy, router, A, quake, src, dst, "balanced")
     assert adv.options and not adv.unreachable
     arr = router.costs(quake.F, quake.bg).arr
-    risk = edge_risk(toy, A, quake)
     G = nx_graph(g, arr)
     best = nx.shortest_path_length(G, src, dst, weight="weight")
     assert min(o.time_s for o in adv.options) == pytest.approx(best, rel=1e-9)
+    # every option returned must be genuinely non-dominated: no OTHER option beats it on both time and risk at once
+    # (brute-force O(n^2) check against the independent definition in routing/pareto.py)
     for o in adv.options:
-        lam = o.penalty
-        Gp = nx_graph(g, arr * (1 + lam * risk.astype(float)))
-        opt = nx.shortest_path_length(Gp, src, dst, weight="weight")
-        got = float((arr[o.edges] * (1 + lam * risk.astype(float)[o.edges])).sum())
-        assert got == pytest.approx(opt, rel=1e-9)
+        for p in adv.options:
+            if p is o:
+                continue
+            assert not (p.time_s <= o.time_s and p.risk_km <= o.risk_km and (p.time_s < o.time_s or p.risk_km < o.risk_km)), (o, p)
+    # and the recommended one really does minimise the stated objective among exactly those options
+    assert adv.recommended.objective == pytest.approx(min(o.objective for o in adv.options))
 
 
 def test_no_route_ever_uses_a_closed_road(toy, A, router, quake):

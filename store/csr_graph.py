@@ -12,7 +12,9 @@ Design notes
 - tt_s / length_m are float64 (the spec said float32) so oracle tests can demand exact equality.
 - The graph is treated as IMMUTABLE. To change it (add a flyover, contraflow arcs) call
   ``with_extra_edges`` which returns a NEW graph plus index maps. "Undo" = drop the new graph.
-- Per-scenario state (blocked / slowed) lives OUTSIDE the graph in ``ScenarioState``.
+- Per-scenario state (blocked / slowed) lives OUTSIDE the graph: the simulator builds a plain per-edge
+  speed-factor array from the active hazards each state step (see ``sim/engine_state.py``) rather than
+  mutating this graph in place.
 """
 from __future__ import annotations
 
@@ -36,9 +38,6 @@ ROAD_CLASS_NAMES = [
 ]
 ROAD_CLASS_CODE = {name: i for i, name in enumerate(ROAD_CLASS_NAMES)}
 ARTERIAL_CODES = frozenset(range(0, 4))  # motorway, trunk, primary, secondary
-
-# ---- scenario condition codes (kept from Phase 1's RoadCondition tiers) ----------------
-COND_NORMAL, COND_SLOWED, COND_SEVERE, COND_BLOCKED = 0, 1, 2, 3
 
 _NODE_ARRAYS = ("lat", "lon", "elev_m", "slope_deg", "node_osm_id")
 _EDGE_ARRAYS = ("tt_s", "length_m", "road_class", "lanes_dir", "flags", "way_id", "rev")
@@ -436,37 +435,3 @@ class CSRGraph:
             r = self.rev[has]
             assert (self.rev[r] == np.flatnonzero(has)).all(), "rev is not an involution"
             assert (self.indices[r] == self.edge_tails[has]).all(), "rev head mismatch"
-
-
-@dataclass
-class ScenarioState:
-    """Per-scenario road condition, shared by every algorithm (Phase 1's shared-state rule)."""
-
-    cond: np.ndarray   # uint8 [E]  COND_*
-    mult: np.ndarray   # float64 [E]  travel-time multiplier (inf = blocked)
-
-    @classmethod
-    def normal(cls, n_edges: int) -> "ScenarioState":
-        return cls(np.zeros(n_edges, dtype=np.uint8), np.ones(n_edges, dtype=np.float64))
-
-    @classmethod
-    def from_probability(cls, p: np.ndarray, thresholds: dict, multipliers: dict) -> "ScenarioState":
-        """Threshold failure probabilities into the four Phase 1 tiers."""
-        p = np.asarray(p, dtype=np.float64)
-        cond = np.zeros(len(p), dtype=np.uint8)
-        cond[p >= thresholds["slowed"]] = COND_SLOWED
-        cond[p >= thresholds["severe"]] = COND_SEVERE
-        cond[p >= thresholds["blocked"]] = COND_BLOCKED
-        mult = np.ones(len(p), dtype=np.float64)
-        mult[cond == COND_SLOWED] = multipliers["slowed"]
-        mult[cond == COND_SEVERE] = multipliers["severe"]
-        mult[cond == COND_BLOCKED] = np.inf
-        return cls(cond, mult)
-
-    @property
-    def blocked(self) -> np.ndarray:
-        return self.cond == COND_BLOCKED
-
-    def cost(self, tt_s: np.ndarray) -> np.ndarray:
-        """Travel-time cost vector with inf on blocked edges."""
-        return tt_s * self.mult
